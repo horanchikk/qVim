@@ -1,0 +1,570 @@
+ * Serving Flask app 'server' (lazy loadin INFO  Starting development server...
+<s> [webpack.Progress] 0% compiling
+<s> [webpack.Progress] 10% building 0/0 modules 0 active 
+<s> [webpack.Progress] 10% building 0/1 modules 1 active multi C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\index.js?http://192.168.42.74:8080&sockPath=/sockjs-node C:\Users\horan\Documents\dev\VTool\node_modules\webpa * Detected change in 'C:\\Users\\horan\\Documents\\dev\\VTool\\src\\pybackend\\server.py', reloading
+ * Restarting with stat
+  File "C:\Users\horan\Documents\dev\VTool\src\pybackend\server.py", line 26
+    @app.route('/config/change', methods=['POST', 'GET')
+                                                       ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
+ckPath=/sockjs-node ./src/main.js
+<s> [webpack.Progress] 10% building 2/2 modules 0 active 
+<s> [webpack.Progress] 10% building 2/3 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\index.js?http://192.168.42.74:8080&sockPath=/sockjs-node
+<s> [webpack.Progress] 10% building 2/4 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack\hot\dev-server.js
+<s> [webpack.Progress] 10% building 2/5 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\main.js
+<s> [webpack.Progress] 10% building 3/5 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\main.js
+<s> [webpack.Progress] 10% building 4/5 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\main.js
+<s> [webpack.Progress] 10% building 5/5 modules 0 active 
+<s> [webpack.Progress] 40% building 5/5 modules 0 active 
+<s> [webpack.Progress] 40% building 5/6 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack\hot sync nonrecursive /^\.\/log$/
+<s> [webpack.Progress] 40% building 6/6 modules 0 active 
+<s> [webpack.Progress] 40% building 6/7 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack\hot\log.js
+<s> [webpack.Progress] 40% building 6/8 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack\hot\emitter.js
+<s> [webpack.Progress] 40% building 6/9 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack\hot\log-apply-result.js
+<s> [webpack.Progress] 40% building 6/10 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\socket.js
+<s> [webpack.Progress] 40% building 6/11 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\overlay.js
+<s> [webpack.Progress] 40% building 6/12 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\utils\log.js
+<s> [webpack.Progress] 40% building 6/13 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\utils\sendMessage.js
+<s> [webpack.Progress] 40% building 6/14 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\utils\reloadApp.js
+<s> [webpack.Progress] 40% building 6/15 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\utils\createSocketUrl.js
+<s> [webpack.Progress] 40% building 7/15 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\utils\createSocketUrl.js
+<s> [webpack.Progress] 40% building 8/15 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\utils\createSocketUrl.js
+<s> [webpack.Progress] 40% building 9/15 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\utils\createSocketUrl.js
+<s> [webpack.Progress] 40% building 10/15 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\utils\createSocketUrl.js
+<s> [webpack.Progress] 40% building 11/15 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\utils\createSocketUrl.js
+<s> [webpack.Progress] 40% building 11/16 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.promise.js
+<s> [webpack.Progress] 40% building 11/17 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.array.iterator.js
+<s> [webpack.Progress] 40% building 11/18 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.object.assign.js
+<s> [webpack.Progress] 40% building 11/19 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.promise.finally.js
+<s> [webpack.Progress] 40% building 11/20 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\vue\dist\vue.runtime.esm-bundler.js
+<s> [webpack.Progress] 40% building 12/20 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\vue\dist\vue.runtime.esm-bundler.js
+<s> [webpack.Progress] 40% building 13/20 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\vue\dist\vue.runtime.esm-bundler.js
+<s> [webpack.Progress] 40% building 14/20 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\vue\dist\vue.runtime.esm-bundler.js
+<s> [webpack.Progress] 40% building 15/20 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\vue\dist\vue.runtime.esm-bundler.js
+<s> [webpack.Progress] 40% building 15/21 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\App.vue
+<s> [webpack.Progress] 40% building 15/22 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\clients\SockJSClient.js
+<s> [webpack.Progress] 40% building 16/22 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\clients\SockJSClient.js
+<s> [webpack.Progress] 40% building 17/22 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\clients\SockJSClient.js
+<s> [webpack.Progress] 40% building 18/22 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\clients\SockJSClient.js
+<s> [webpack.Progress] 40% building 19/22 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\clients\SockJSClient.js
+<s> [webpack.Progress] 40% building 20/22 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\clients\SockJSClient.js
+<s> [webpack.Progress] 40% building 21/22 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\clients\SockJSClient.js
+<s> [webpack.Progress] 40% building 21/23 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\events\events.js
+<s> [webpack.Progress] 40% building 22/23 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\events\events.js
+<s> [webpack.Progress] 40% building 22/24 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\utils\getCurrentScriptSource.js
+<s> [webpack.Progress] 40% building 22/25 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\App.vue?vue&type=template&id=7ba5bd90
+<s> [webpack.Progress] 40% building 23/25 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\utils\getCurrentScriptSource.js
+<s> [webpack.Progress] 40% building 23/26 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\App.vue?vue&type=template&id=7ba5bd90
+<s> [webpack.Progress] 40% building 23/27 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\url\url.js
+<s> [webpack.Progress] 40% building 23/28 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\exportHelper.js
+<s> [webpack.Progress] 40% building 24/28 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\exportHelper.js
+<s> [webpack.Progress] 40% building 25/28 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\exportHelper.js
+<s> [webpack.Progress] 40% building 26/28 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\exportHelper.js
+<s> [webpack.Progress] 40% building 26/29 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--9-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--9-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--9-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\sass-loader\dist\cjs.js??ref--9-oneOf-1-3!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\App.vue?vue&type=style&index=0&id=7ba5bd90&lang=scss
+<s> [webpack.Progress] 40% building 27/29 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\exportHelper.js
+<s> [webpack.Progress] 40% building 28/29 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\exportHelper.js
+<s> [webpack.Progress] 40% building 28/30 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\to-indexed-object.js
+<s> [webpack.Progress] 40% building 28/31 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\add-to-unscopables.js
+<s> [webpack.Progress] 40% building 28/32 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\iterators.js
+<s> [webpack.Progress] 40% building 28/33 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\internal-state.js
+<s> [webpack.Progress] 40% building 28/34 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-define-property.js
+<s> [webpack.Progress] 40% building 28/35 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\define-iterator.js
+<s> [webpack.Progress] 40% building 28/36 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-pure.js
+<s> [webpack.Progress] 40% building 28/37 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\descriptors.js
+<s> [webpack.Progress] 40% building 28/38 modules 10 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\export.js
+<s> [webpack.Progress] 40% building 28/39 modules 11 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-assign.js
+<s> [webpack.Progress] 40% building 28/40 modules 12 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\global.js
+<s> [webpack.Progress] 40% building 28/41 modules 13 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\get-built-in.js
+<s> [webpack.Progress] 40% building 28/42 modules 14 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\function-call.js
+<s> [webpack.Progress] 40% building 28/43 modules 15 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\native-promise-constructor.js
+<s> [webpack.Progress] 40% building 28/44 modules 16 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\redefine.js
+<s> [webpack.Progress] 40% building 28/45 modules 17 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\redefine-all.js
+<s> [webpack.Progress] 40% building 28/46 modules 18 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-set-prototype-of.js
+<s> [webpack.Progress] 40% building 28/47 modules 19 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\set-to-string-tag.js
+<s> [webpack.Progress] 40% building 28/48 modules 20 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\a-callable.js
+<s> [webpack.Progress] 40% building 28/49 modules 21 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\set-species.js
+<s> [webpack.Progress] 40% building 28/50 modules 22 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-callable.js
+<s> [webpack.Progress] 40% building 28/51 modules 23 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-object.js
+<s> [webpack.Progress] 40% building 28/52 modules 24 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\an-instance.js
+<s> [webpack.Progress] 40% building 28/53 modules 25 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\inspect-source.js
+<s> [webpack.Progress] 40% building 28/54 modules 26 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\iterate.js
+<s> [webpack.Progress] 40% building 28/55 modules 27 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\check-correctness-of-iteration.js
+<s> [webpack.Progress] 40% building 28/56 modules 28 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\microtask.js
+<s> [webpack.Progress] 40% building 28/57 modules 29 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\species-constructor.js
+<s> [webpack.Progress] 40% building 28/58 modules 30 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\task.js
+<s> [webpack.Progress] 40% building 28/59 modules 31 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\promise-resolve.js
+<s> [webpack.Progress] 40% building 28/60 modules 32 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\host-report-errors.js
+<s> [webpack.Progress] 40% building 28/61 modules 33 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\new-promise-capability.js
+<s> [webpack.Progress] 40% building 28/62 modules 34 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\perform.js
+<s> [webpack.Progress] 40% building 28/63 modules 35 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-forced.js
+<s> [webpack.Progress] 40% building 28/64 modules 36 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\queue.js
+<s> [webpack.Progress] 40% building 28/65 modules 37 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\engine-is-browser.js
+<s> [webpack.Progress] 40% building 28/66 modules 38 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\well-known-symbol.js
+<s> [webpack.Progress] 40% building 28/67 modules 39 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\engine-is-node.js
+<s> [webpack.Progress] 40% building 28/68 modules 40 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\engine-v8-version.js
+<s> [webpack.Progress] 40% building 28/69 modules 41 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\fails.js
+<s> [webpack.Progress] 40% building 28/70 modules 42 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\router\index.js
+<s> [webpack.Progress] 40% building 29/70 modules 41 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\router\index.js
+<s> [webpack.Progress] 40% building 29/71 modules 42 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\clients\BaseClient.js
+<s> [webpack.Progress] 40% building 29/72 modules 43 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--9-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--9-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--9-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\sass-loader\dist\cjs.js??ref--9-oneOf-1-3!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\App.vue?vue&type=style&index=0&id=7ba5bd90&lang=scss
+<s> [webpack.Progress] 40% building 30/72 modules 42 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\client\clients\BaseClient.js
+<s> [webpack.Progress] 40% building 30/73 modules 43 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--9-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--9-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\sass-loader\dist\cjs.js??ref--9-oneOf-1-3!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\App.vue?vue&type=style&index=0&id=7ba5bd90&lang=scss
+<s> [webpack.Progress] 40% building 30/74 modules 44 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 31/74 modules 43 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 32/74 modules 42 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 33/74 modules 41 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 34/74 modules 40 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 35/74 modules 39 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 36/74 modules 38 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 37/74 modules 37 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 38/74 modules 36 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 39/74 modules 35 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 40/74 modules 34 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 40/75 modules 35 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack\buildin\global.js
+<s> [webpack.Progress] 40% building 41/75 modules 34 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 42/75 modules 33 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 43/75 modules 32 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 44/75 modules 31 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 45/75 modules 30 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 46/75 modules 29 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 47/75 modules 28 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 48/75 modules 27 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 49/75 modules 26 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 50/75 modules 25 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 51/75 modules 24 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 52/75 modules 23 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 53/75 modules 22 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 54/75 modules 21 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 55/75 modules 20 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 56/75 modules 19 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 57/75 modules 18 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 58/75 modules 17 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 59/75 modules 16 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 60/75 modules 15 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 61/75 modules 14 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 62/75 modules 13 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 63/75 modules 12 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 64/75 modules 11 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 65/75 modules 10 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 66/75 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 67/75 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 68/75 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 69/75 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 70/75 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 71/75 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 72/75 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 73/75 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\strip-ansi\index.js
+<s> [webpack.Progress] 40% building 73/76 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\url\util.js
+<s> [webpack.Progress] 40% building 74/76 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\url\util.js
+<s> [webpack.Progress] 40% building 75/76 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\url\util.js
+<s> [webpack.Progress] 40% building 75/77 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\ansi-html-community\index.js
+<s> [webpack.Progress] 40% building 75/78 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\querystring-es3\index.js
+<s> [webpack.Progress] 40% building 75/79 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\lib\addStylesClient.js
+<s> [webpack.Progress] 40% building 75/80 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\pages\Home.vue
+<s> [webpack.Progress] 40% building 75/81 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue
+<s> [webpack.Progress] 40% building 75/82 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\pages\Shop.vue
+<s> [webpack.Progress] 40% building 75/83 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\html-entities\lib\index.js
+<s> [webpack.Progress] 40% building 75/84 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\node-libs-browser\node_modules\punycode\punycode.js
+<s> [webpack.Progress] 40% building 76/84 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\node-libs-browser\node_modules\punycode\punycode.js
+<s> [webpack.Progress] 40% building 76/85 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\require-object-coercible.js
+<s> [webpack.Progress] 40% building 76/86 modules 10 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\indexed-object.js
+<s> [webpack.Progress] 40% building 76/87 modules 11 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-create.js
+<s> [webpack.Progress] 40% building 76/88 modules 12 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\native-weak-map.js
+<s> [webpack.Progress] 40% building 76/89 modules 13 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\function-uncurry-this.js
+<s> [webpack.Progress] 40% building 76/90 modules 14 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\create-non-enumerable-property.js
+<s> [webpack.Progress] 40% building 76/91 modules 15 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\has-own-property.js
+<s> [webpack.Progress] 40% building 76/92 modules 16 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\shared-store.js
+<s> [webpack.Progress] 40% building 76/93 modules 17 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\shared-key.js
+<s> [webpack.Progress] 40% building 76/94 modules 18 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\hidden-keys.js
+<s> [webpack.Progress] 40% building 76/95 modules 19 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\function-name.js
+<s> [webpack.Progress] 40% building 76/96 modules 20 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-get-prototype-of.js
+<s> [webpack.Progress] 40% building 76/97 modules 21 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\create-iterator-constructor.js
+<s> [webpack.Progress] 40% building 76/98 modules 22 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\iterators-core.js
+<s> [webpack.Progress] 40% building 76/99 modules 23 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\ie8-dom-define.js
+<s> [webpack.Progress] 40% building 76/100 modules 24 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\v8-prototype-define-bug.js
+<s> [webpack.Progress] 40% building 76/101 modules 25 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\an-object.js
+<s> [webpack.Progress] 40% building 76/102 modules 26 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\to-property-key.js
+<s> [webpack.Progress] 40% building 76/103 modules 27 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-keys.js
+<s> [webpack.Progress] 40% building 76/104 modules 28 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-get-own-property-symbols.js
+<s> [webpack.Progress] 40% building 76/105 modules 29 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-property-is-enumerable.js
+<s> [webpack.Progress] 40% building 76/106 modules 30 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\to-object.js
+<s> [webpack.Progress] 40% building 76/107 modules 31 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-get-own-property-descriptor.js
+<s> [webpack.Progress] 40% building 76/108 modules 32 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\set-global.js
+<s> [webpack.Progress] 40% building 76/109 modules 33 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\copy-constructor-properties.js
+<s> [webpack.Progress] 40% building 76/110 modules 34 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\try-to-string.js
+<s> [webpack.Progress] 40% building 76/111 modules 35 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-is-prototype-of.js
+<s> [webpack.Progress] 40% building 76/112 modules 36 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\function-bind-context.js
+<s> [webpack.Progress] 40% building 76/113 modules 37 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\a-possible-prototype.js
+<s> [webpack.Progress] 40% building 76/114 modules 38 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-array-iterator-method.js
+<s> [webpack.Progress] 40% building 76/115 modules 39 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\length-of-array-like.js
+<s> [webpack.Progress] 40% building 76/116 modules 40 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\get-iterator.js
+<s> [webpack.Progress] 40% building 76/117 modules 41 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\iterator-close.js
+<s> [webpack.Progress] 40% building 76/118 modules 42 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\get-iterator-method.js
+<s> [webpack.Progress] 40% building 76/119 modules 43 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\engine-is-ios.js
+<s> [webpack.Progress] 40% building 76/120 modules 44 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\engine-is-ios-pebble.js
+<s> [webpack.Progress] 40% building 76/121 modules 45 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\engine-is-webos-webkit.js
+<s> [webpack.Progress] 40% building 76/122 modules 46 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\a-constructor.js
+<s> [webpack.Progress] 40% building 76/123 modules 47 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\function-apply.js
+<s> [webpack.Progress] 40% building 76/124 modules 48 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\array-slice.js
+<s> [webpack.Progress] 40% building 76/125 modules 49 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\html.js
+<s> [webpack.Progress] 40% building 76/126 modules 50 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\document-create-element.js
+<s> [webpack.Progress] 40% building 76/127 modules 51 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\shared.js
+<s> [webpack.Progress] 40% building 76/128 modules 52 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\uid.js
+<s> [webpack.Progress] 40% building 76/129 modules 53 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\native-symbol.js
+<s> [webpack.Progress] 40% building 76/130 modules 54 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\use-symbol-as-uid.js
+<s> [webpack.Progress] 40% building 76/131 modules 55 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\engine-user-agent.js
+<s> [webpack.Progress] 40% building 76/132 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\classof-raw.js
+<s> [webpack.Progress] 40% building 77/132 modules 55 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\classof-raw.js
+<s> [webpack.Progress] 40% building 77/133 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\loglevel\lib\loglevel.js
+<s> [webpack.Progress] 40% building 78/133 modules 55 active C:\Users\horan\Documents\dev\VTool\node_modules\loglevel\lib\loglevel.js
+<s> [webpack.Progress] 40% building 79/133 modules 54 active C:\Users\horan\Documents\dev\VTool\node_modules\loglevel\lib\loglevel.js
+<s> [webpack.Progress] 40% building 80/133 modules 53 active C:\Users\horan\Documents\dev\VTool\node_modules\loglevel\lib\loglevel.js
+<s> [webpack.Progress] 40% building 80/134 modules 54 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=template&id=b66ee972
+<s> [webpack.Progress] 40% building 81/134 modules 53 active C:\Users\horan\Documents\dev\VTool\node_modules\loglevel\lib\loglevel.js
+<s> [webpack.Progress] 40% building 81/135 modules 54 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 82/135 modules 53 active C:\Users\horan\Documents\dev\VTool\node_modules\loglevel\lib\loglevel.js
+<s> [webpack.Progress] 40% building 82/136 modules 54 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--9-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--9-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--9-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\sass-loader\dist\cjs.js??ref--9-oneOf-1-3!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=style&index=0&id=b66ee972&lang=scss
+<s> [webpack.Progress] 40% building 83/136 modules 53 active C:\Users\horan\Documents\dev\VTool\node_modules\loglevel\lib\loglevel.js
+<s> [webpack.Progress] 40% building 83/137 modules 54 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=template&id=b66ee972
+<s> [webpack.Progress] 40% building 83/138 modules 55 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 83/139 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--9-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--9-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--9-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\sass-loader\dist\cjs.js??ref--9-oneOf-1-3!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=style&index=0&id=b66ee972&lang=scss
+<s> [webpack.Progress] 40% building 84/139 modules 55 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 84/140 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--9-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--9-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\sass-loader\dist\cjs.js??ref--9-oneOf-1-3!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=style&index=0&id=b66ee972&lang=scss
+<s> [webpack.Progress] 40% building 85/140 modules 55 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--9-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--9-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\sass-loader\dist\cjs.js??ref--9-oneOf-1-3!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=style&index=0&id=b66ee972&lang=scss
+<s> [webpack.Progress] 40% building 85/141 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\pages\Home.vue?vue&type=template&id=5a90ec03
+<s> [webpack.Progress] 40% building 86/141 modules 55 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--9-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--9-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\sass-loader\dist\cjs.js??ref--9-oneOf-1-3!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=style&index=0&id=b66ee972&lang=scss
+<s> [webpack.Progress] 40% building 86/142 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--7-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\pages\Home.vue?vue&type=style&index=0&id=5a90ec03&lang=css
+<s> [webpack.Progress] 40% building 87/142 modules 55 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--9-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--9-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\sass-loader\dist\cjs.js??ref--9-oneOf-1-3!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=style&index=0&id=b66ee972&lang=scss
+<s> [webpack.Progress] 40% building 87/143 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Home.vue?vue&type=template&id=5a90ec03
+<s> [webpack.Progress] 40% building 87/144 modules 57 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--7-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Home.vue?vue&type=style&index=0&id=5a90ec03&lang=css
+<s> [webpack.Progress] 40% building 88/144 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Home.vue?vue&type=template&id=5a90ec03
+<s> [webpack.Progress] 40% building 88/145 modules 57 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Home.vue?vue&type=style&index=0&id=5a90ec03&lang=css
+<s> [webpack.Progress] 40% building 89/145 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Home.vue?vue&type=style&index=0&id=5a90ec03&lang=css
+<s> [webpack.Progress] 40% building 89/146 modules 57 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\pages\Shop.vue?vue&type=template&id=62f6ee9a
+<s> [webpack.Progress] 40% building 90/146 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Home.vue?vue&type=style&index=0&id=5a90ec03&lang=css
+<s> [webpack.Progress] 40% building 90/147 modules 57 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\pages\Shop.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 91/147 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Home.vue?vue&type=style&index=0&id=5a90ec03&lang=css
+<s> [webpack.Progress] 40% building 91/148 modules 57 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--7-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\pages\Shop.vue?vue&type=style&index=0&id=62f6ee9a&lang=css
+<s> [webpack.Progress] 40% building 92/148 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Home.vue?vue&type=style&index=0&id=5a90ec03&lang=css
+<s> [webpack.Progress] 40% building 92/149 modules 57 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Shop.vue?vue&type=template&id=62f6ee9a
+<s> [webpack.Progress] 40% building 92/150 modules 58 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Shop.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 92/151 modules 59 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--7-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Shop.vue?vue&type=style&index=0&id=62f6ee9a&lang=css
+<s> [webpack.Progress] 40% building 93/151 modules 58 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Shop.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 93/152 modules 59 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Shop.vue?vue&type=style&index=0&id=62f6ee9a&lang=css
+<s> [webpack.Progress] 40% building 94/152 modules 58 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Shop.vue?vue&type=style&index=0&id=62f6ee9a&lang=css
+<s> [webpack.Progress] 40% building 94/153 modules 59 active C:\Users\horan\Documents\dev\VTool\node_modules\sockjs-client\dist\sockjs.js
+<s> [webpack.Progress] 40% building 95/153 modules 58 active C:\Users\horan\Documents\dev\VTool\node_modules\sockjs-client\dist\sockjs.js
+<s> [webpack.Progress] 40% building 95/154 modules 59 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack\buildin\module.js
+<s> [webpack.Progress] 40% building 96/154 modules 58 active C:\Users\horan\Documents\dev\VTool\node_modules\sockjs-client\dist\sockjs.js
+<s> [webpack.Progress] 40% building 96/155 modules 59 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 97/155 modules 58 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 98/155 modules 57 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 99/155 modules 56 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 100/155 modules 55 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 101/155 modules 54 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 102/155 modules 53 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 103/155 modules 52 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 104/155 modules 51 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 105/155 modules 50 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 106/155 modules 49 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 107/155 modules 48 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 108/155 modules 47 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 109/155 modules 46 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 110/155 modules 45 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 111/155 modules 44 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 112/155 modules 43 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 113/155 modules 42 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 114/155 modules 41 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 115/155 modules 40 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 116/155 modules 39 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 117/155 modules 38 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 118/155 modules 37 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 119/155 modules 36 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 120/155 modules 35 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 121/155 modules 34 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 122/155 modules 33 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 123/155 modules 32 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 124/155 modules 31 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 125/155 modules 30 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 126/155 modules 29 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 127/155 modules 28 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 128/155 modules 27 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 129/155 modules 26 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 130/155 modules 25 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 131/155 modules 24 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 132/155 modules 23 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 133/155 modules 22 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 134/155 modules 21 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 135/155 modules 20 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 136/155 modules 19 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 137/155 modules 18 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 138/155 modules 17 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 139/155 modules 16 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 140/155 modules 15 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 141/155 modules 14 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 142/155 modules 13 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 143/155 modules 12 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 144/155 modules 11 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 145/155 modules 10 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\runtime\api.js
+<s> [webpack.Progress] 40% building 145/156 modules 11 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\runtime-dom\dist\runtime-dom.esm-bundler.js
+<s> [webpack.Progress] 40% building 146/156 modules 10 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\runtime-dom\dist\runtime-dom.esm-bundler.js
+<s> [webpack.Progress] 40% building 147/156 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\runtime-dom\dist\runtime-dom.esm-bundler.js
+<s> [webpack.Progress] 40% building 148/156 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\runtime-dom\dist\runtime-dom.esm-bundler.js
+<s> [webpack.Progress] 40% building 149/156 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\runtime-dom\dist\runtime-dom.esm-bundler.js
+<s> [webpack.Progress] 40% building 150/156 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\runtime-dom\dist\runtime-dom.esm-bundler.js
+<s> [webpack.Progress] 40% building 151/156 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\runtime-dom\dist\runtime-dom.esm-bundler.js
+<s> [webpack.Progress] 40% building 152/156 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\runtime-dom\dist\runtime-dom.esm-bundler.js
+<s> [webpack.Progress] 40% building 152/157 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\querystring-es3\decode.js
+<s> [webpack.Progress] 40% building 152/158 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\querystring-es3\encode.js
+<s> [webpack.Progress] 40% building 152/159 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\lib\listToStyles.js
+<s> [webpack.Progress] 40% building 152/160 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.function.name.js
+<s> [webpack.Progress] 40% building 152/161 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.symbol.js
+<s> [webpack.Progress] 40% building 152/162 modules 10 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.symbol.description.js
+<s> [webpack.Progress] 40% building 152/163 modules 11 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.string.link.js
+<s> [webpack.Progress] 40% building 152/164 modules 12 active C:\Users\horan\Documents\dev\VTool\node_modules\html-entities\lib\html5-entities.js
+<s> [webpack.Progress] 40% building 152/165 modules 13 active C:\Users\horan\Documents\dev\VTool\node_modules\html-entities\lib\xml-entities.js
+<s> [webpack.Progress] 40% building 153/165 modules 12 active C:\Users\horan\Documents\dev\VTool\node_modules\html-entities\lib\xml-entities.js
+<s> [webpack.Progress] 40% building 153/166 modules 13 active C:\Users\horan\Documents\dev\VTool\node_modules\html-entities\lib\html4-entities.js
+<s> [webpack.Progress] 40% building 153/167 modules 14 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\create-property-descriptor.js
+<s> [webpack.Progress] 40% building 153/168 modules 15 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-define-properties.js
+<s> [webpack.Progress] 40% building 153/169 modules 16 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-symbol.js
+<s> [webpack.Progress] 40% building 153/170 modules 17 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\correct-prototype-getter.js
+<s> [webpack.Progress] 40% building 153/171 modules 18 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\to-primitive.js
+<s> [webpack.Progress] 40% building 153/172 modules 19 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\enum-bug-keys.js
+<s> [webpack.Progress] 40% building 153/173 modules 20 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-keys-internal.js
+<s> [webpack.Progress] 40% building 153/174 modules 21 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\own-keys.js
+<s> [webpack.Progress] 40% building 153/175 modules 22 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\to-length.js
+<s> [webpack.Progress] 40% building 153/176 modules 23 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\get-method.js
+<s> [webpack.Progress] 40% building 153/177 modules 24 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\classof.js
+<s> [webpack.Progress] 40% building 153/178 modules 25 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 154/178 modules 24 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 155/178 modules 23 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 156/178 modules 22 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 157/178 modules 21 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 158/178 modules 20 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 159/178 modules 19 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 160/178 modules 18 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 161/178 modules 17 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 162/178 modules 16 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 163/178 modules 15 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 164/178 modules 14 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 165/178 modules 13 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 166/178 modules 12 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 167/178 modules 11 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 168/178 modules 10 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 169/178 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 170/178 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 171/178 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 172/178 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 173/178 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 174/178 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-constructor.js
+<s> [webpack.Progress] 40% building 175/178 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--9-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--9-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\sass-loader\dist\cjs.js??ref--9-oneOf-1-3!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=style&index=0&id=b66ee972&lang=scss
+<s> [webpack.Progress] 40% building 176/178 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\pages\Settings.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 176/179 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-router\dist\vue-router.esm-bundler.js
+<s> [webpack.Progress] 40% building 177/179 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-router\dist\vue-router.esm-bundler.js
+<s> [webpack.Progress] 40% building 177/180 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\to-string.js
+<s> [webpack.Progress] 40% building 177/181 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-get-own-property-names-external.js
+<s> [webpack.Progress] 40% building 177/182 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\is-array.js
+<s> [webpack.Progress] 40% building 177/183 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-get-own-property-names.js
+<s> [webpack.Progress] 40% building 177/184 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\well-known-symbol-wrapped.js
+<s> [webpack.Progress] 40% building 177/185 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\define-well-known-symbol.js
+<s> [webpack.Progress] 40% building 177/186 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\array-iteration.js
+<s> [webpack.Progress] 40% building 177/187 modules 10 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\create-html.js
+<s> [webpack.Progress] 40% building 177/188 modules 11 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\string-html-forced.js
+<s> [webpack.Progress] 40% building 177/189 modules 12 active C:\Users\horan\Documents\dev\VTool\node_modules\html-entities\lib\surrogate-pairs.js
+<s> [webpack.Progress] 40% building 178/189 modules 11 active C:\Users\horan\Documents\dev\VTool\node_modules\html-entities\lib\surrogate-pairs.js
+<s> [webpack.Progress] 40% building 179/189 modules 10 active C:\Users\horan\Documents\dev\VTool\node_modules\html-entities\lib\surrogate-pairs.js
+<s> [webpack.Progress] 40% building 179/190 modules 11 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\ordinary-to-primitive.js
+<s> [webpack.Progress] 40% building 179/191 modules 12 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\array-includes.js
+<s> [webpack.Progress] 40% building 179/192 modules 13 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\to-integer-or-infinity.js
+<s> [webpack.Progress] 40% building 179/193 modules 14 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\to-string-tag-support.js
+<s> [webpack.Progress] 40% building 179/194 modules 15 active C:\Users\horan\Documents\dev\VTool\node_modules\webpack-dev-server\node_modules\ansi-regex\index.js
+<s> [webpack.Progress] 40% building 179/195 modules 16 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.object.to-string.js
+<s> [webpack.Progress] 40% building 179/196 modules 17 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.json.stringify.js
+<s> [webpack.Progress] 40% building 180/196 modules 16 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.json.stringify.js
+<s> [webpack.Progress] 40% building 181/196 modules 15 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.json.stringify.js
+<s> [webpack.Progress] 40% building 182/196 modules 14 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.json.stringify.js
+<s> [webpack.Progress] 40% building 183/196 modules 13 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.json.stringify.js
+<s> [webpack.Progress] 40% building 184/196 modules 12 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.json.stringify.js
+<s> [webpack.Progress] 40% building 185/196 modules 11 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.json.stringify.js
+<s> [webpack.Progress] 40% building 186/196 modules 10 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.json.stringify.js
+<s> [webpack.Progress] 40% building 187/196 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.json.stringify.js
+<s> [webpack.Progress] 40% building 188/196 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.json.stringify.js
+<s> [webpack.Progress] 40% building 189/196 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\modules\es.json.stringify.js
+<s> [webpack.Progress] 40% building 189/197 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue
+<s> [webpack.Progress] 40% building 189/198 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue
+<s> [webpack.Progress] 40% building 190/198 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue
+<s> [webpack.Progress] 40% building 191/198 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue
+<s> [webpack.Progress] 40% building 192/198 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue
+<s> [webpack.Progress] 40% building 193/198 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue
+<s> [webpack.Progress] 40% building 194/198 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue
+<s> [webpack.Progress] 40% building 195/198 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue
+<s> [webpack.Progress] 40% building 196/198 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue
+<s> [webpack.Progress] 40% building 197/198 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue
+<s> [webpack.Progress] 40% building 197/199 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=template&id=2fbd94d9
+<s> [webpack.Progress] 40% building 198/199 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue
+<s> [webpack.Progress] 40% building 198/200 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 199/200 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue
+<s> [webpack.Progress] 40% building 199/201 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--7-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=style&index=0&id=2fbd94d9&lang=css
+<s> [webpack.Progress] 40% building 200/201 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue
+<s> [webpack.Progress] 40% building 200/202 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=template&id=2fbd94d9
+<s> [webpack.Progress] 40% building 200/203 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 200/204 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--7-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=style&index=0&id=2fbd94d9&lang=css
+<s> [webpack.Progress] 40% building 201/204 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 201/205 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=style&index=0&id=2fbd94d9&lang=css
+<s> [webpack.Progress] 40% building 202/205 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=style&index=0&id=2fbd94d9&lang=css
+<s> [webpack.Progress] 40% building 202/206 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue?vue&type=template&id=4d51e2e5
+<s> [webpack.Progress] 40% building 203/206 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=style&index=0&id=2fbd94d9&lang=css
+<s> [webpack.Progress] 40% building 203/207 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 204/207 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=style&index=0&id=2fbd94d9&lang=css
+<s> [webpack.Progress] 40% building 204/208 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\pitcher.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--7-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\node_modules\eslint-loader\index.js??ref--14-0!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue?vue&type=style&index=0&id=4d51e2e5&lang=css
+<s> [webpack.Progress] 40% building 205/208 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\notify.vue?vue&type=style&index=0&id=2fbd94d9&lang=css
+<s> [webpack.Progress] 40% building 205/209 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\templateLoader.js??ref--6!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue?vue&type=template&id=4d51e2e5
+<s> [webpack.Progress] 40% building 205/210 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 205/211 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\vue-style-loader\index.js??ref--7-oneOf-1-0!C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue?vue&type=style&index=0&id=4d51e2e5&lang=css
+<s> [webpack.Progress] 40% building 206/211 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--13-0!C:\Users\horan\Documents\dev\VTool\node_modules\babel-loader\lib\index.js!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue?vue&type=script&lang=js
+<s> [webpack.Progress] 40% building 206/212 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\css-loader\dist\cjs.js??ref--7-oneOf-1-1!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\stylePostLoader.js!C:\Users\horan\Documents\dev\VTool\node_modules\postcss-loader\src\index.js??ref--7-oneOf-1-2!C:\Users\horan\Documents\dev\VTool\node_modules\cache-loader\dist\cjs.js??ref--1-0!C:\Users\horan\Documents\dev\VTool\node_modules\vue-loader-v16\dist\index.js??ref--1-1!C:\Users\horan\Documents\dev\VTool\src\components\btn1.vue?vue&type=style&index=0&id=4d51e2e5&lang=css
+<s> [webpack.Progress] 40% building 206/213 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\array-species-create.js
+<s> [webpack.Progress] 40% building 206/214 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\array-slice-simple.js
+<s> [webpack.Progress] 40% building 206/215 modules 9 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\path.js
+<s> [webpack.Progress] 40% building 207/215 modules 8 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\path.js
+<s> [webpack.Progress] 40% building 208/215 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\path.js
+<s> [webpack.Progress] 40% building 209/215 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\path.js
+<s> [webpack.Progress] 40% building 210/215 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\path.js
+<s> [webpack.Progress] 40% building 211/215 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\path.js
+<s> [webpack.Progress] 40% building 212/215 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\path.js
+<s> [webpack.Progress] 40% building 212/216 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\to-absolute-index.js
+<s> [webpack.Progress] 40% building 212/217 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\runtime-core\dist\runtime-core.esm-bundler.js
+<s> [webpack.Progress] 40% building 212/218 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\shared\dist\shared.esm-bundler.js
+<s> [webpack.Progress] 40% building 212/219 modules 7 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-to-string.js
+<s> [webpack.Progress] 40% building 213/219 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-to-string.js
+<s> [webpack.Progress] 40% building 214/219 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-to-string.js
+<s> [webpack.Progress] 40% building 215/219 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-to-string.js
+<s> [webpack.Progress] 40% building 216/219 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-to-string.js
+<s> [webpack.Progress] 40% building 217/219 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-to-string.js
+<s> [webpack.Progress] 40% building 218/219 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\object-to-string.js
+<s> [webpack.Progress] 40% building 219/219 modules 0 active 
+<s> [webpack.Progress] 40% building 219/220 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\array-species-constructor.js
+<s> [webpack.Progress] 40% building 219/221 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\create-property.js
+<s> [webpack.Progress] 40% building 220/221 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\core-js\internals\create-property.js
+<s> [webpack.Progress] 40% building 221/221 modules 0 active 
+<s> [webpack.Progress] 40% building 221/222 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\file-loader\dist\cjs.js??ref--3-0!C:\Users\horan\Documents\dev\VTool\src\assets\img\done.svg
+<s> [webpack.Progress] 40% building 221/223 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\file-loader\dist\cjs.js??ref--3-0!C:\Users\horan\Documents\dev\VTool\src\assets\img\code.svg
+<s> [webpack.Progress] 40% building 221/224 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\file-loader\dist\cjs.js??ref--3-0!C:\Users\horan\Documents\dev\VTool\src\assets\img\error.svg
+<s> [webpack.Progress] 40% building 221/225 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\index.js
+<s> [webpack.Progress] 40% building 222/225 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\index.js
+<s> [webpack.Progress] 40% building 223/225 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\file-loader\dist\cjs.js??ref--3-0!C:\Users\horan\Documents\dev\VTool\src\assets\img\error.svg
+<s> [webpack.Progress] 40% building 224/225 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\file-loader\dist\cjs.js??ref--3-0!C:\Users\horan\Documents\dev\VTool\src\assets\img\error.svg
+<s> [webpack.Progress] 40% building 225/225 modules 0 active 
+<s> [webpack.Progress] 40% building 225/226 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\proxy.js
+<s> [webpack.Progress] 40% building 225/227 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\env.js
+<s> [webpack.Progress] 40% building 225/228 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\const.js
+<s> [webpack.Progress] 40% building 225/229 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\plugin.js
+<s> [webpack.Progress] 40% building 226/229 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\plugin.js
+<s> [webpack.Progress] 40% building 227/229 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\plugin.js
+<s> [webpack.Progress] 40% building 228/229 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\plugin.js
+<s> [webpack.Progress] 40% building 228/230 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\reactivity\dist\reactivity.esm-bundler.js
+<s> [webpack.Progress] 40% building 229/230 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\reactivity\dist\reactivity.esm-bundler.js
+<s> [webpack.Progress] 40% building 230/230 modules 0 active 
+<s> [webpack.Progress] 40% building 230/231 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\index.js
+<s> [webpack.Progress] 40% building 231/231 modules 0 active 
+<s> [webpack.Progress] 40% building 231/232 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\app.js
+<s> [webpack.Progress] 40% building 231/233 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\api.js
+<s> [webpack.Progress] 40% building 231/234 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\hooks.js
+<s> [webpack.Progress] 40% building 231/235 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\component.js
+<s> [webpack.Progress] 40% building 231/236 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\context.js
+<s> [webpack.Progress] 40% building 231/237 modules 6 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\util.js
+<s> [webpack.Progress] 40% building 232/237 modules 5 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\util.js
+<s> [webpack.Progress] 40% building 233/237 modules 4 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\util.js
+<s> [webpack.Progress] 40% building 234/237 modules 3 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\util.js
+<s> [webpack.Progress] 40% building 235/237 modules 2 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\util.js
+<s> [webpack.Progress] 40% building 236/237 modules 1 active C:\Users\horan\Documents\dev\VTool\node_modules\@vue\devtools-api\lib\esm\api\util.js
+<s> [webpack.Progress] 40% building 237/237 modules 0 active 
+<s> [webpack.Progress] 70% building 237/237 modules 0 active 
+<s> [webpack.Progress] 70% finish module graph
+<s> [webpack.Progress] 70% finish module graph FlagDependencyExportsPlugin
+<s> [webpack.Progress] 70% sealing
+<s> [webpack.Progress] 70% sealing WarnCaseSensitiveModulesPlugin
+<s> [webpack.Progress] 72% basic dependencies optimization
+<s> [webpack.Progress] 72% dependencies optimization
+<s> [webpack.Progress] 73% advanced dependencies optimization
+<s> [webpack.Progress] 73% after dependencies optimization
+<s> [webpack.Progress] 71% chunk graph
+<s> [webpack.Progress] 71% after chunk graph
+<s> [webpack.Progress] 71% after chunk graph WebAssemblyModulesPlugin
+<s> [webpack.Progress] 74% optimizing
+<s> [webpack.Progress] 74% basic module optimization
+<s> [webpack.Progress] 75% module optimization
+<s> [webpack.Progress] 75% advanced module optimization
+<s> [webpack.Progress] 76% after module optimization
+<s> [webpack.Progress] 76% basic chunk optimization
+<s> [webpack.Progress] 76% basic chunk optimization EnsureChunkConditionsPlugin
+<s> [webpack.Progress] 76% basic chunk optimization RemoveEmptyChunksPlugin
+<s> [webpack.Progress] 76% basic chunk optimization MergeDuplicateChunksPlugin
+<s> [webpack.Progress] 77% chunk optimization
+<s> [webpack.Progress] 77% advanced chunk optimization
+<s> [webpack.Progress] 77% advanced chunk optimization SplitChunksPlugin
+<s> [webpack.Progress] 77% advanced chunk optimization RemoveEmptyChunksPlugin
+<s> [webpack.Progress] 77% after chunk optimization
+<s> [webpack.Progress] 78% module and chunk tree optimization
+<s> [webpack.Progress] 78% after module and chunk tree optimization
+<s> [webpack.Progress] 79% basic chunk modules optimization
+<s> [webpack.Progress] 80% chunk modules optimization
+<s> [webpack.Progress] 80% advanced chunk modules optimization
+<s> [webpack.Progress] 81% after chunk modules optimization
+<s> [webpack.Progress] 81% module reviving
+<s> [webpack.Progress] 81% module reviving RecordIdsPlugin
+<s> [webpack.Progress] 82% module order optimization
+<s> [webpack.Progress] 82% advanced module order optimization
+<s> [webpack.Progress] 83% before module ids
+<s> [webpack.Progress] 83% before module ids NamedModulesPlugin
+<s> [webpack.Progress] 83% module ids
+<s> [webpack.Progress] 84% module id optimization
+<s> [webpack.Progress] 84% module id optimization
+<s> [webpack.Progress] 85% chunk reviving
+<s> [webpack.Progress] 85% chunk reviving RecordIdsPlugin
+<s> [webpack.Progress] 85% chunk order optimization
+<s> [webpack.Progress] 85% chunk order optimization OccurrenceOrderChunkIdsPlugin
+<s> [webpack.Progress] 86% before chunk ids
+<s> [webpack.Progress] 86% before chunk ids NamedChunksPlugin
+<s> [webpack.Progress] 86% chunk id optimization
+<s> [webpack.Progress] 87% after chunk id optimization
+<s> [webpack.Progress] 87% record modules
+<s> [webpack.Progress] 87% record modules RecordIdsPlugin
+<s> [webpack.Progress] 87% record chunks
+<s> [webpack.Progress] 87% record chunks RecordIdsPlugin
+<s> [webpack.Progress] 88% hashing
+<s> [webpack.Progress] 88% after hashing
+<s> [webpack.Progress] 88% after hashing HotModuleReplacementPlugin
+<s> [webpack.Progress] 89% record hash
+<s> [webpack.Progress] 89% module assets processing
+<s> [webpack.Progress] 90% chunk assets processing
+<s> [webpack.Progress] 90% additional chunk assets processing
+<s> [webpack.Progress] 90% additional chunk assets processing HotModuleReplacementPlugin
+<s> [webpack.Progress] 91% recording
+<s> [webpack.Progress] 91% recording HotModuleReplacementPlugin
+<s> [webpack.Progress] 92% additional asset processing
+<s> [webpack.Progress] 92% chunk asset optimization
+<s> [webpack.Progress] 93% after chunk asset optimization
+<s> [webpack.Progress] 93% asset optimization
+<s> [webpack.Progress] 94% after asset optimization
+<s> [webpack.Progress] 94% after seal
+<s> [webpack.Progress] 95% emitting
+<s> [webpack.Progress] 95% emitting HtmlWebpackPlugin
+<s> [webpack.Progress] 95% emitting CopyPlugin
+<s> [webpack.Progress] 98% after emitting
+<s> [webpack.Progress] 98% after emitting CopyPlugin
+ DONE  Compiled successfully in 2446ms21:04:46
+
+<s> [webpack.Progress] 100% 
+
+
+  App running at:
+  - Local:   http://localhost:8080/ 
+  - Network: http://192.168.42.74:8080/
+
+  Note that the development build is not optimized.
+  To create a production build, run yarn build.
+
+^Cerror Command failed with exit code 3221225786.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
