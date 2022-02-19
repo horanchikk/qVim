@@ -2,9 +2,7 @@
   <div class="wrapper">
     <span class="cont_title">
       <h1 class="title">Welcome to qVim!</h1>
-      <a class="description"
-        >It is qVim lol :D</a
-      >
+      <a class="description">It is qVim lol :D</a>
     </span>
   </div>
 </template>
@@ -13,10 +11,6 @@
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
-
-body {
-  background-color: rgb(50, 50, 50);
-}
 
 .wrapper {
   width: 640px;

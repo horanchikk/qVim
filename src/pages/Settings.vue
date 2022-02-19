@@ -1,105 +1,78 @@
 <template>
-  <Notify :title="'hello'" :type="typein" />
   <div class="settings-main">
     <div class="settings-wrapper">
       <div class="container">
         <btn1 :title="'POST to flask server'" @click="postflask()" />
         <btn1 :title="'GET to flask server'" @click="getflask()" />
-        <!-- <btn1 :title="''" />
-        <btn1 :title="''" />
-        <btn1 :title="''" /> -->
       </div>
     </div>
     <div class="settings-wrapper">
       <div class="container">
         <div class="settings-container2">
           <h1>Config</h1>
-          <textarea name="" id="cfg" cols="30" rows="10" ></textarea>
+          <textarea name="" id="cfg" cols="30" rows="10"></textarea>
           <!-- textarea => config.vim -->
-        </div> 
+        </div>
         <btn1 :title="'Save and update'" />
       </div>
     </div>
   </div>
+  <Notify :title="'hello'" :type="typein" />
 </template>
 
 <script>
 import btn1 from "../components/btn1.vue";
-import Notify from "../components/notify.vue"
+import Notify from "../components/notify.vue";
 
 export default {
   components: {
     btn1,
-    Notify
+    Notify,
   },
   data() {
     return {
-      typein: 'done'
+      typein: "done",
     };
   },
   methods: {
-    showstatus(message, type) {
-      let elem = document.getElementById('settings-notifier-js').style;
-      document.getElementById('settings-notifier-js-message').innerText = message;
-
-      if (type == 'done') {
-        this.typein = 'done';
-      } else if (type == 'error') {
-        this.typein = 'error';
-      } else if (type == 'code') {
-        this.typein = 'code'
-      }
-
-      elem.opacity = '1';
-      elem.transform = "translateX(0%)";
-      setTimeout(() => {
-        elem.opacity = '0';
-        elem.transform = "translateX(20%)";
-      }, 2000)
-    },
-    getflask() {
-      var client = new XMLHttpRequest();
-      client.open("GET", "http://127.0.0.1:5000/test", false);
-      client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-      client.send(null);
-      this.showstatus("Sended!", 'done');
-      document.getElementById('cfg').innerText = client.responseText;
-    },
     postflask() {
-      fetch('http://localhost:5000/config/change?type=vim', {
-        method: 'POST',
+      fetch("http://localhost:5000/config/change?type=vim", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin' : '*',
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
         },
-        body: JSON.stringify(document.getElementById('cfg').value),
+        body: JSON.stringify(document.getElementById("cfg").value),
       })
-      .then(response => response.json())
-      .then(data => {
-        console.log('success: ', data)
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-    }
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("success: ", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    },
   },
 };
 </script>
 
 <style lang="scss">
 .settings-main {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
   height: 100%;
   display: flex;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .settings-wrapper {
   width: 30%;
   height: 70%;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: #242424;
+  border-radius: 13px;
+  width: 50%;
+  height: 100%;
+  margin: 0 10px;
 }
 
 .settings-title {

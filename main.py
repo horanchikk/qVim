@@ -1,6 +1,4 @@
-from subprocess import call
+import subprocess
 
-try:
-    call('cd src/pybackend/ && python core.py runserver', shell=True)
-except:
-    pass
+subprocess.call('python py/update.py', shell=True)
+subprocess.call('python py/server.py', shell=True)

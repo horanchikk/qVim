@@ -7,8 +7,6 @@
 </template>
 
 <script>
-
-
 export default {
   props: {
     title: {
@@ -16,7 +14,6 @@ export default {
     },
   },
 };
-
 </script>
 
 <style>
@@ -28,15 +25,19 @@ export default {
 }
 
 .settings-container-btn {
+  cursor: pointer;
+  width: 80%;
   padding: 5px;
-  background: rgba(255, 255, 255, 0.35);
-  border: 3px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  border: 3px solid #b6b6b6;
+  color: #b6b6b6;
   border-radius: 5px;
   font-size: 1.5rem;
   transition: 0.1s ease-in;
 }
 
 .settings-container-btn:hover {
-  border: 3px solid rgba(255, 255, 255, 0.7);
+  border: 3px solid #dddddd;
+  color: #dddddd;
 }
 </style>

@@ -1,107 +1,174 @@
 <template>
   <div class="shop-container">
-    <div class="shop_menu">
-    <li class="elem_menu">Integrations</li>
-    <li class="elem_menu">Code Display</li>
-    <li class="elem_menu">Lauguage</li>
-    <li class="elem_menu">Interface</li>
-  </div>
-  <div class="eac"><h1>EARLY ACCESS</h1></div>
-  <div class="shop_search">
-    <input type="text" placeholder="Find plugin..." class="shop_search_elem" />
-  </div>
-  <div class="shop_elem" v-for="plugin in plugins" :key="plugin">
-    <div class="shop_info">
-      <div class="shop_info_container">
-        <h1 class="shop_info_title">{{ plugin.name }}</h1>
-        <h4 class="shop_info_description">{{ plugin.description }}</h4>
-      </div>
+    <!-- <div class="shop_menu">
+      <li class="elem_menu">Integrations</li>
+      <li class="elem_menu">Code Display</li>
+      <li class="elem_menu">Lauguage</li>
+      <li class="elem_menu">Interface</li>
+    </div> -->
+    <div class="shop_search">
+      <input
+        type="text"
+        placeholder="Find plugin..."
+        class="shop_search_elem"
+        :value="inputValue"
+        @input="setInputValue($event.target.value)"
+      />
     </div>
-    <div class="shop_info_icon">
-      <a :href="plugin.link"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="60px"
-          viewBox="0 0 24 24"
-          width="60px"
-          class="shop_info_svg"
+
+    <div class="shop_elem-wrapper">
+      <template v-for="plugin in searchedPlugins">
+        <div
+          class="shop_elem"
+          v-if="
+            plugin.name.includes(inputValue) ||
+            plugin.description.includes(inputValue)
+          "
+          :key="plugin"
         >
-          <path d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path></svg
-      ></a>
+          <div class="shop_info">
+            <div class="shop_info_container">
+              <h1 class="shop_info_title">{{ plugin.name }}</h1>
+              <h4 class="shop_info_description">{{ plugin.description }}</h4>
+            </div>
+          </div>
+
+          <div class="shop_info_icon" @click='installpkg(plugin.link, plugin.name)'>
+            <a
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="60px"
+                viewBox="0 0 24 24"
+                width="60px"
+                class="shop_info_svg"
+              >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path></svg
+            ></a>
+          </div>
+        </div>
+      </template>
     </div>
-  </div>
+    <div class="j-center">
+      <img src="../../public/loading.svg" class="shop_loader" v-if="loading"/>
+      <button
+        v-else-if="!loading && currentPage <= pageLimit"
+        @click="getPlugins"
+        class="shop_load-new-data"
+      >
+        more
+      </button>
+    </div>
+    <notify :type="typein" />
   </div>
 </template>
 
 <script>
+import notify from "../components/notify.vue";
+
 export default {
   data() {
     return {
-      plugins: [
-        {
-          name: "fugitive.vim",
-          description:
-            "Fugitive is the premier Vim plugin for Git. Or maybe it's the premier Git plugin for Vim? Either way, it's so awesome, it should be illegal. That's why it's called Fugitive.",
-          link: "https://github.com/tpope/vim-fugitive",
-          type: "Integrations",
-        },
-        {
-          name: "surround.vim",
-          description:
-            "parentheses, brackets, quotes, XML tags, and more. The plugin provides mappings to easily delete, change and add such surroundings in pairs",
-          link: "https://github.com/tpope/vim-surround",
-          type: "Code Display",
-        },
-        {
-          name: "The NERD Tree",
-          description:
-            "The NERDTree is a file system explorer for the Vim editor. Using this plugin, users can visually browse complex directory hierarchies, quickly open files for reading or editing, and perform basic file system operations.",
-          link: "https://github.com/scrooloose/nerdtree",
-          type: "Integrations",
-        },
-        {
-          name: "Syntatic",
-          description:
-            "Syntastic is a syntax checking plugin for Vim created by Martin Grenfell. It runs files through external syntax checkers and displays any resulting errors to the user. This can be done on demand, or automatically as files are saved. If syntax errors are detected, the user is notified and is happy because they didn't have to compile their code or execute their script to find them.",
-          link: "https://github.com/scrooloose/syntastic",
-          type: "Code Display",
-        },
-      ],
+      plugins: [],
+      currentPage: 1,
+      loading: true,
+      pageLimit: 16,
+      searchedPlugins: [],
+      inputValue: "",
+      typein: 'done',
     };
   },
+  methods: {
+    async notify(message, icon) {
+      if (icon == 'done') {
+        this.typein = 'done';
+      } else if (icon == 'error') {
+        this.typein = 'error';
+      } else if (icon == 'loop') {
+        this.typein = 'loop'
+      } else if (icon == 'wifinot') {
+        this.typein = 'wifinot'
+      }
+
+      document.getElementById('notify-container-message').innerText = message;
+
+      let elem = document.getElementById('notify-container').style;
+      elem.opacity = '1';
+      elem.transform = "translateX(0%)";
+      setTimeout(() => {
+        elem.opacity = '0';
+        elem.transform = "translateX(-20%)";
+      }, 2000)
+    },
+    async getPlugins() {
+      this.loading = true;
+      this.notify(`Requesting to Flask. Please wait...`, 'loop');
+      const data = await fetch(
+        `http://localhost:5000/topics?page=${this.currentPage}`
+      );
+      const plugins = await data.json();
+      this.notify(`Loaded!`, 'done')
+      plugins.forEach((plugin) => {
+        this.plugins.push(plugin);
+        this.searchedPlugins.push(plugin);
+      });
+      this.currentPage += 1;
+      this.loading = false;
+    },
+    async installpkg(link, name) {
+      this.notify(`Installing ${name}...`, 'loop');
+      const req = await fetch(
+        `http://localhost:5000/install?link=${link.toString()}`
+      ); 
+      const ans = await req.text();
+      if (ans === 'ok') {
+        this.notify(`${name} has been installed!`, 'done')
+      }
+    },
+    setInputValue(value) {
+      this.inputValue = value;
+    },
+  },
+  async mounted() {
+    this.getPlugins();
+  },
+  components: {
+    notify
+  }
 };
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
-.shop-container {font-family: 'Ubuntu', sans-serif;}
+.shop-container {
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 40px;
+}
+
+.shop_elem-wrapper {
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .shop_elem {
   position: relative;
-  width: 60%;
-  height: auto;
-  margin-left: 20%;
-  background-color: rgba(110, 110, 110, 0.7);
-  border-radius: 5px;
+  width: 47%;
+  margin: 10px 10px;
+  background-color: #3d3d3d;
+  border-radius: 13px;
   color: white;
   opacity: 0;
   transform: translateY(-100%);
   animation: load3 1s forwards;
 }
 
-.eac {
-  position: fixed;
-  color: rgba(155, 155, 155, 0.3);
-  margin-left: 10px;
-  margin-top: 38%;
-  font-weight: bolder;
-  cursor: default;
-}
-
 .shop_search {
   position: absolute;
+  margin-top: 10px;
   width: 15%;
   height: 10%;
   padding: 0px 15px 15px 15px;
@@ -111,7 +178,7 @@ export default {
 .shop_search_elem {
   width: 100%;
   border: 0;
-  background: rgba(155, 155, 155, 0.5);
+  background: #3d3d3d;
   height: 50%;
   text-align: center;
   font-size: 23px;
@@ -174,11 +241,11 @@ export default {
   height: auto;
   display: flex;
   flex-direction: column;
-  margin-top: 15%;
+  top: 35%;
   padding-bottom: 10px;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
-  background-color: rgba(170, 170, 170, 0.7);
+  background-color: #3d3d3d;
   transform: translateX(-100%);
   animation: load2 1s forwards;
 }
@@ -193,25 +260,24 @@ export default {
 }
 
 .elem_menu {
-  width: auto;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   margin-right: 15px;
   margin-top: 10px;
-  background-color: rgba(236, 240, 241, 0.6);
+  background-color: rgba(238, 238, 238, 0.85);
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   list-style-type: none;
   transition: 0.2s ease-in-out;
   transform: translateX(-100%);
   animation: load2 2s forwards;
-  font-size: 100%;
-  font-family: "Ubuntu", sans-serif;
-  text-align: center;
 }
 
 .elem_menu:hover {
-  background-color: rgba(236, 240, 241, 1);
+  background-color: rgb(238, 238, 238);
   margin-right: 3px;
 }
 
@@ -226,5 +292,30 @@ export default {
     opacity: 1;
     transform: translateY(0%);
   }
+}
+.j-center {
+  display: flex;
+  justify-content: center;
+}
+.shop_load-new-data {
+  cursor: pointer;
+  color: white;
+  margin: 10px;
+  background: transparent;
+  border: 2px solid white;
+  padding: 7px 25px;
+  border-radius: 13px;
+  transition: 0.3s;
+}
+.shop_load-new-data:hover {
+  color: rgb(150, 150, 150);
+  border: 2px solid rgb(150, 150, 150);
+}
+
+.shop_loader {
+  color: white;
+  margin: 10px;
+  padding: 7px 25px;
+  background: transparent;
 }
 </style>

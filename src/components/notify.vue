@@ -1,12 +1,15 @@
 <template>
-  <div class="settings-notifier" id="settings-notifier-js">
-    <div class="settings-notifier-icon" :class="checkType(type)">
-      <img v-if="type === 'done'" src="../assets/img/done.svg" alt="done" id="settings-notifier-icon-js" />
-      <img v-if="type === 'error'" src="../assets/img/error.svg" alt="error" id="settings-notifier-icon-js" />
-      <img v-if="type === 'code'" src="../assets/img/code.svg" alt="code" id="settings-notifier-icon-js" />
+  <div class="notify-container" id='notify-container'>
+    <div class="notify-container-icon" :class="setIcon(type)">
+
+      <img v-if="type === 'done'" src="../assets/img/done.svg" alt="done" />
+      <img v-if="type === 'error'" src="../assets/img/error.svg" alt="error" />
+      <img v-if="type === 'loop'" src="../assets/img/loop.svg" alt="loop" />
+      <img v-if="type === 'wifinot'" src="../assets/img/wifinot.svg" alt="wifinot" />
+    
     </div>
-    <div class="settings-notifier-message" id="settings-notifier-js-message" >
-      <a></a>
+    <div class="notify-container-message" id="notify-container-message">
+      <a>Notify example.</a>
     </div>
   </div>
 </template>
@@ -20,7 +23,7 @@ export default {
     }
   },
   methods: {
-    checkType(type) {
+    setIcon(type) {
       return type;
     }
   }
@@ -29,20 +32,39 @@ export default {
 
 <style>
 
-.settings-notifier {
-  position: absolute;
-  width: 20%;
-  display: flex;
-  margin-left: 70%;
-  margin-top: 35%;
+.notify-container {
+  position: fixed;
+  top: 7%;
+  min-height: 5%;
+  max-width: 17%;
+  display: flex; 
+  flex-direction: row;
+  padding: 20px;
   opacity: 0;
-  border-radius: 3px;
-  transform: translateX(20%);
-  background: linear-gradient(90deg, rgba(10, 10, 10, 0.7) 0%, rgba(10, 10, 10 ,0.7) 0%, rgba(0, 0, 0, 0) 100%);
-  transition: .4s ease-in-out;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background: rgba(61, 61, 61, 0.5);
+  color: white;
+  transform: translateX(-20%);
+  transition: 0.2s ease-in-out;
 }
 
-.settings-notifier-icon {width: 10%; height: 100%; margin: 5px;}
-.settings-notifier-message {width: 90%; height: 100%; margin: 3px; color: white;}
+.notify-container-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notify-container-message {
+  width: 80%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notify-container-message a {
+  padding: 7px;
+}
 
 </style>
