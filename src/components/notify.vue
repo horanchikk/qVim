@@ -2,10 +2,10 @@
   <div class="notify-container" id='notify-container'>
     <div class="notify-container-icon" :class="setIcon(type)">
 
-      <img v-if="type === 'done'" src="../assets/img/done.svg" alt="done" />
-      <img v-if="type === 'error'" src="../assets/img/error.svg" alt="error" />
-      <img v-if="type === 'loop'" src="../assets/img/loop.svg" alt="loop" />
-      <img v-if="type === 'wifinot'" src="../assets/img/wifinot.svg" alt="wifinot" />
+      <img v-if="type === 'done'" src="../assets/img/done.svg" alt="done" id='notify-container-icon-done' />
+      <img v-if="type === 'error'" src="../assets/img/error.svg" alt="error" id='notify-container-icon-error' />
+      <img v-if="type === 'loop'" src="../assets/img/loop.svg" alt="loop" id='notify-container-icon-loop' />
+      <img v-if="type === 'wifinot'" src="../assets/img/wifinot.svg" alt="wifinot" id='notify-container-icon-wifinot' />
     
     </div>
     <div class="notify-container-message" id="notify-container-message">

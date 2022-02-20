@@ -1,0 +1,65 @@
+<template>
+    <div class="progressbar">
+        <div class="progressbar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="48px" viewBox="0 0 24 24" width="24px" fill="#11CCEE"><rect fill="none" height="24" width="24"/><path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"/></svg>
+        </div>
+        <div class="progressbar-messages">
+            <h2>Sending request to Flask...</h2>
+        </div>
+        <div class="progressbar-line">
+
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        
+    }
+</script>
+
+<style lang="scss" scoped>
+
+@keyframes loading {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+.progressbar {
+    position: fixed;
+    top: 95%;
+    width: 100%;
+    height: 50px;
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    background: rgba(0,0,0,0.7);
+}
+
+.progressbar-icon {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+        animation-name: loading;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.progressbar-messages {
+    width: 90%;
+    color: white;
+    font-size: 10px;
+    text-justify: center;
+}
+
+</style>

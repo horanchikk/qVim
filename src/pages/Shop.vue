@@ -60,11 +60,13 @@
       </button>
     </div>
     <notify :type="typein" />
+    <progressbar />
   </div>
 </template>
 
 <script>
 import notify from "../components/notify.vue";
+import progressbar from "../components/progressbar.vue"
 
 export default {
   data() {
@@ -102,12 +104,11 @@ export default {
     },
     async getPlugins() {
       this.loading = true;
-      this.notify(`Requesting to Flask. Please wait...`, 'loop');
+      this.notify(`Requesting to Flask server. Please wait...`, 'loop');
       const data = await fetch(
         `http://localhost:5000/topics?page=${this.currentPage}`
       );
       const plugins = await data.json();
-      this.notify(`Loaded!`, 'done')
       plugins.forEach((plugin) => {
         this.plugins.push(plugin);
         this.searchedPlugins.push(plugin);
@@ -133,7 +134,8 @@ export default {
     this.getPlugins();
   },
   components: {
-    notify
+    notify,
+    progressbar
   }
 };
 </script>
