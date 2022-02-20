@@ -1,8 +1,9 @@
 from time import sleep
 import requests
 from bs4 import BeautifulSoup as bs
-from flask import Flask, request, make_response, jsonify
+from flask import Flask, request, jsonify
 from flask_cors import CORS
+import subprocess
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -11,6 +12,11 @@ app.config['Access-Control-Allow-Origin'] = '*'
 
 def traceback(err):
     return '[{"name": "Traceback", "descs": "' + str(err) + '"}]'
+
+def cmd(msg):
+    devlogfile = open('out/config.log', 'w')
+    subprocess.call(msg, stdout=devlogfile, shell=True)
+    devlogfile.write('Waiting...')
 
 @app.route("/topics", methods=["GET"])
 def topics():
@@ -55,9 +61,18 @@ def topics():
 def install():
     link = request.args.get('link')
     print(link)
-    sleep(8)
+    sleep(1)
+    cmd(f'curl {link}') # WORKING ON IT
     return 'ok', 200
 
+@app.route("/log", methods=["GET"])
+def logging():
+    sleep(0.1)
+    try:
+        devlogrd = open('out/config.log', 'r').readlines()[-1]
+        return devlogrd, 200
+    except:
+        return "", 200
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

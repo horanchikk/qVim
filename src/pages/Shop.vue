@@ -1,11 +1,5 @@
 <template>
   <div class="shop-container">
-    <!-- <div class="shop_menu">
-      <li class="elem_menu">Integrations</li>
-      <li class="elem_menu">Code Display</li>
-      <li class="elem_menu">Lauguage</li>
-      <li class="elem_menu">Interface</li>
-    </div> -->
     <div class="shop_search">
       <input
         type="text"
@@ -60,7 +54,7 @@
       </button>
     </div>
     <notify :type="typein" />
-    <progressbar />
+    <progressbar :icon="debico" />
   </div>
 </template>
 
@@ -78,6 +72,7 @@ export default {
       searchedPlugins: [],
       inputValue: "",
       typein: 'done',
+      debico: '',
     };
   },
   methods: {
@@ -102,6 +97,22 @@ export default {
         elem.transform = "translateX(-20%)";
       }, 2000)
     },
+    async debug() {
+      for (;;) {
+        let res = await fetch(
+          `http://localhost:5000/log`
+        );
+        let restext = await res.text();
+
+        if (restext === 'Waiting...') {
+          this.debico = 'wait'
+        } else {
+          this.debico = 'req'
+        }
+
+        document.getElementById('progressbar-messages').innerText = restext;  
+      }
+    },  
     async getPlugins() {
       this.loading = true;
       this.notify(`Requesting to Flask server. Please wait...`, 'loop');
@@ -132,6 +143,7 @@ export default {
   },
   async mounted() {
     this.getPlugins();
+    this.debug();
   },
   components: {
     notify,
@@ -187,6 +199,7 @@ export default {
   border-radius: 5px;
   transition: 0.3s ease-in;
 }
+
 .shop_search_elem::placeholder {
   color: white;
   transition: 0.3s ease-in;
@@ -196,6 +209,7 @@ export default {
   outline: 0;
   background: rgba(195, 195, 195, 1);
 }
+
 .shop_search_elem:focus::placeholder {
   color: black;
 }
@@ -209,27 +223,33 @@ export default {
   border-radius: 5px;
   padding: 10px;
 }
+
 .shop_info_title {
   margin-left: 5%;
   width: 65%;
 }
+
 .shop_info_description {
   width: 100%;
 }
+
 .shop_info_svg {
   fill: rgba(255, 255, 255, 0.7);
   transition: 0.3s ease-in-out;
   margin: 15%;
 }
+
 .shop_info_svg:hover {
   fill: rgba(255, 255, 255, 1);
   cursor: pointer;
 }
+
 .shop_info_icon {
   position: absolute;
   margin-left: 80%;
   bottom: 30%;
 }
+
 .shop_info_icon > h1 {
   position: absolute;
   top: 50%;
