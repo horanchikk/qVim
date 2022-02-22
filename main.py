@@ -74,8 +74,8 @@ def serverRun():
         serverreq = "[bold red]" + serverreq
         with console.status(f"[bold white] Status code: {serverreq}\n", spinner="line"):
             sleep(2)
-        with console.status(f"[bold white] Try 2...\n", spinner="line"):
-            sleep(2)
+        with console.status(f"[bold white] Attempt 2...\n", spinner="line"):
+            sleep(5)
             try:
                 serverreq = requests.get('http://localhost:5000').status_code
             except:

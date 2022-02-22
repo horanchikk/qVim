@@ -18,6 +18,10 @@ def cmd(msg):
     subprocess.call(msg, stdout=devlogfile, shell=True)
     devlogfile.write('Waiting...')
 
+@app.route("/", methods=["GET"])
+def mainpage():
+    return "", 200
+
 @app.route("/topics", methods=["GET"])
 def topics():
     page = request.args.get('page')
@@ -52,17 +56,17 @@ def topics():
 
     response = jsonify(texts)
     
-    if texts == []:
-        return "", 400
-    else:
-        return response
+    match texts:
+        case []:
+            return "", 400
+    return response
 
 @app.route("/install", methods=["GET"])
 def install():
     link = request.args.get('link')
     print(link)
     sleep(1)
-    cmd(f'curl {link}') # WORKING ON IT
+    cmd(f'curl {link}')
     return 'ok', 200
 
 @app.route("/log", methods=["GET"])

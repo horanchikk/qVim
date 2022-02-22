@@ -72,7 +72,7 @@ export default {
       searchedPlugins: [],
       inputValue: "",
       typein: 'done',
-      debico: '',
+      debico: 'res',
     };
   },
   methods: {
@@ -319,10 +319,12 @@ export default {
   display: flex;
   justify-content: center;
 }
+
 .shop_load-new-data {
   cursor: pointer;
   color: white;
   margin: 10px;
+  margin-bottom: 50px;
   background: transparent;
   border: 2px solid white;
   padding: 7px 25px;
