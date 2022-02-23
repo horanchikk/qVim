@@ -10,18 +10,14 @@ qVim - it is vim plugin manager with graphic interface. Here you can find some p
 - And many functions for easiest plugin management...
 
 ## Requirements
- - Python 3.7 or later
+ - Python 3.10 or later
  - Node.JS
  
 
 ## First launch
 Execute main.py script using:
 ```sh
-python3 main.py
-```
-or
-```sh
-python main.py
+python3.10 main.py
 ```
 
 ## About developing
