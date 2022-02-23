@@ -1,20 +1,7 @@
 {
     "settings": {
         "server": "https://vimawesome.com/ or https://github.com/topics/vim-plugins",
-        "storage": "~/.config/nvim/init.vim"
-    },
-    "store": {
-        "name1": {
-            "description": "Its descriptrion1",
-            "link": "https://github.com/horanDEV/qvim"
-        },
-        "name2": {
-            "description": "Its descriptrion2",
-            "link": "https://github.com/horanDEV/qvim"
-        },
-        "name3": {
-            "description": "Its descriptrion3",
-            "link": "https://github.com/horanDEV/qvim"
-        }
+        "storage": "~/.config/nvim/init.vim",
+        "manager": "vim-plug"
     }
 }

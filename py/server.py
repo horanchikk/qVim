@@ -1,9 +1,10 @@
-from time import sleep
 import requests
+import subprocess
+import sys
+from time import sleep
 from bs4 import BeautifulSoup as bs
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import subprocess
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -77,6 +78,10 @@ def logging():
         return devlogrd, 200
     except:
         return "", 200
+
+@app.route("/stop", methods=["GET"])
+def stop():
+    sys.exit(0)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

@@ -2,7 +2,7 @@
 qVim - it is vim plugin manager with graphic interface. Here you can find some plugins and qVim install it to your favorite text editor automatically.
 
 ## Why qVim?
-- It is comfortable, then using default terminal
+- This is more convenient than using the default terminal
 - It is using vim-plug technology
 - You can manage your plugins
 - You can load your favorite config and qVim can working with it

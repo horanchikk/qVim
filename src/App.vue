@@ -17,10 +17,9 @@
     </div>
 
     <div class="header-menu">
-      <router-link to="/shop"> <li class="header-elem">Shop</li> </router-link>
-      <router-link to="/settings">
-        <li class="header-elem">Settings</li>
-      </router-link>
+      <router-link to="/plugins"> <li class="header-elem">Plugins</li> </router-link>
+      <router-link to="/configs"> <li class="header-elem">Configs</li> </router-link>
+      <router-link to="/settings"> <li class="header-elem">Settings</li> </router-link>
       <li class="header-elem">About</li>
     </div>
     <div class="header-turnoff">
@@ -55,13 +54,10 @@ body {
 }
 
 .header-main {
-  padding: 0 20px;
+  width: 100%;
   height: 20%;
-  width: 30%;
-  padding: 5px 0;
-  border-radius: 13px;
+  // padding: 5px 0;
   margin: 0 auto;
-  margin-top: 4rem;
   background-color: #242424;
   display: flex;
   align-items: center;
@@ -145,13 +141,31 @@ body {
 }
 
 @media (max-width: 1700px) {
-  .header-main {
-    width: 45%;
+  .header-elem {
+    margin: 0 10px;
   }
 }
-@media (max-width: 1200px) {
-  .header-main {
-    width: 55%;
+@media (max-width: 800px) {
+  .header-elem {
+    margin: 0;
+    padding: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .header-elem {
+    font-size: 17px;
+    margin: 0;
+    padding: 10px;
+  }
+  .header-elem:hover {
+    font-size: 17px;
+    margin: 0;
+    padding: 10px;
+  }
+  .router-link-active {
+    li {
+      font-size: 18px;
+    }
   }
 }
 </style>

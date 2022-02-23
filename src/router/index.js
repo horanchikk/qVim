@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
-import Shop from '../pages/Shop.vue'
+import Plugins from '../pages/Plugins.vue'
 import Settings from '../pages/Settings.vue'
+import Configs from '../pages/Configs.vue'
 
 const routes = [
 	{
@@ -10,9 +11,14 @@ const routes = [
 		component: Home
 	},
 	{
-		path: '/shop',
-		name: 'Shop',
-		component: Shop
+		path: '/plugins',
+		name: 'Plugins',
+		component: Plugins
+	},
+	{
+		path: '/configs',
+		name: 'configs',
+		component: Configs
 	},
 	{
 		path: '/settings',
