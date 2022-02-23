@@ -60,6 +60,7 @@ export default {
 }
 
 @media (max-width: 2000px) {
+  /* Desktop */
   .notify-container {
     padding: 6px;
     background: rgba(61, 61, 61, 0.5);
@@ -67,9 +68,6 @@ export default {
 }
 @media (max-width: 700px) {
   /* mobile */
-}
-
-@media (max-width: 500px) {
   .notify-container {
     top: 0;
     padding-right: 100%;
