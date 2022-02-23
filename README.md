@@ -17,11 +17,7 @@ qVim - it is vim plugin manager with graphic interface. Here you can find some p
 ## First launch
 Execute main.py script using:
 ```sh
-python3 main.py
-```
-or
-```sh
-python main.py
+python3.10 main.py
 ```
 
 ## About developing
