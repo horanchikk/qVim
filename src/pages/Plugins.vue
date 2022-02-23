@@ -50,7 +50,7 @@
         @click="getPlugins"
         class="shop_load-new-data"
       >
-        more
+        Load more
       </button>
     </div>
     <notify :type="typein" />
@@ -88,14 +88,20 @@ export default {
       }
 
       document.getElementById('notify-container-message').innerText = message;
-
       let elem = document.getElementById('notify-container').style;
-      elem.opacity = '1';
-      elem.transform = "translateX(0%)";
+      elem.display = "flex";
+
+      setTimeout(() => {
+        elem.opacity = '1';
+        elem.transform = "translateX(0%)";
+      }, 100)
       setTimeout(() => {
         elem.opacity = '0';
         elem.transform = "translateX(-20%)";
       }, 2000)
+      setTimeout(() => {
+        elem.display = "none";
+      }, 2400)
     },
     async debug() {
       for (;;) {
@@ -316,6 +322,7 @@ export default {
     transform: translateY(0%);
   }
 }
+
 .j-center {
   display: flex;
   justify-content: center;
@@ -325,13 +332,15 @@ export default {
   cursor: pointer;
   color: white;
   margin: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   background: transparent;
   border: 2px solid white;
   padding: 7px 25px;
   border-radius: 13px;
   transition: 0.3s;
+  font-size: 15px;
 }
+
 .shop_load-new-data:hover {
   color: rgb(150, 150, 150);
   border: 2px solid rgb(150, 150, 150);
@@ -350,6 +359,7 @@ export default {
     margin-top: 40px;
   }
 }
+
 @media (max-width: 1500px) {
   .shop-container {
     margin-top: 40px;
@@ -404,11 +414,12 @@ export default {
     margin: 0;
   }
 }
+
 @media (max-width: 500px) {
   .shop_search {
     position: relative;
     margin-left: 0%;
-    width: 94%;
+    width: 90%;
   }
 }
 </style>

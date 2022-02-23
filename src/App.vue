@@ -22,7 +22,7 @@
       <router-link to="/settings"> <li class="header-elem">Settings</li> </router-link>
       <li class="header-elem">About</li>
     </div>
-    <div class="header-turnoff">
+    <!-- <div class="header-turnoff">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24">
         <g data-name="Layer 2">
           <g data-name="power">
@@ -34,14 +34,13 @@
           </g>
         </g>
       </svg>
-    </div>
+    </div> -->
   </header>
   <div id="app">
     <router-view />
   </div>
 </template>
 
-<script />
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap");
@@ -153,18 +152,18 @@ body {
 }
 @media (max-width: 500px) {
   .header-elem {
-    font-size: 17px;
+    font-size: 25px;
     margin: 0;
     padding: 10px;
   }
   .header-elem:hover {
-    font-size: 17px;
+    font-size: 25px;
     margin: 0;
     padding: 10px;
   }
   .router-link-active {
     li {
-      font-size: 18px;
+      font-size: 30px;
     }
   }
 }

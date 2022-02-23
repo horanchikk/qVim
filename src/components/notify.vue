@@ -35,15 +35,11 @@ export default {
 .notify-container {
   position: fixed;
   top: 7%;
-  min-height: 5%;
-  max-width: 17%;
-  display: flex; 
+  display: flex;
   flex-direction: row;
-  padding: 20px;
   opacity: 0;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
-  background: rgba(61, 61, 61, 0.5);
   color: white;
   transform: translateX(-20%);
   transition: 0.2s ease-in-out;
@@ -63,8 +59,25 @@ export default {
   align-items: center;
 }
 
-.notify-container-message a {
-  padding: 7px;
+@media (max-width: 2000px) {
+  .notify-container {
+    padding: 6px;
+    background: rgba(61, 61, 61, 0.5);
+  }
+}
+@media (max-width: 700px) {
+  /* mobile */
+}
+
+@media (max-width: 500px) {
+  .notify-container {
+    top: 0;
+    padding-right: 100%;
+    background: rgba(0,0,0, 0.7);
+  }
+  .notify-container-message {
+    white-space: nowrap;
+  }
 }
 
 </style>

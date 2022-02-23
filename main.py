@@ -14,7 +14,7 @@ except:
     noderr = ''
     from subprocess import call
     from sys import exit
-    call('pip3 install rich requests bs4 flask flask-cors lxml psutil', shell=True)
+    call('python3.10 -m pip install rich requests bs4 flask flask-cors lxml psutil', shell=True) # linux
     node = call('npm install --global yarn', stderr=noderr)
     if noderr != '':
         raise Exception('Install nodejs!')

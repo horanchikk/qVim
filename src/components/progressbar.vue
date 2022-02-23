@@ -46,9 +46,11 @@
 
 .progressbar {
     position: fixed;
-    top: 95%;
     width: 100%;
     height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     cursor: default;
     display: flex;
     flex-direction: row;
