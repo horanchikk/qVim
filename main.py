@@ -1,27 +1,3 @@
-# Exceptions can be: FileNotFoundError(config.json); IndexError(sys.argv); ImportError
-
-from sys import stderr
-
-
-try:
-    import json, multiprocessing, requests, psutil
-    from webbrowser import open_new_tab
-    from time import sleep
-    from rich.console import Console
-    from subprocess import call, PIPE
-    from time import sleep
-except:
-    noderr = ''
-    from subprocess import call
-    from sys import exit
-    call('python3.10 -m pip install rich requests bs4 flask flask-cors lxml psutil', shell=True) # linux
-    node = call('npm install --global yarn', stderr=noderr)
-    if noderr != '':
-        raise Exception('Install nodejs!')
-    call('python main.py', shell=True)
-    exit(0)
-
-
 import json, multiprocessing, requests, psutil
 from webbrowser import open_new_tab
 from time import sleep

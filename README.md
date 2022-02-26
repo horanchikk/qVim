@@ -13,11 +13,19 @@ qVim - it is vim plugin manager with graphic interface. Here you can find some p
  - Python 3.10 or later
  - Node.JS
  
-
 ## First launch
-Execute main.py script using:
+
+Install all dependencies:
+
 ```sh
-python3.10 main.py
+pip install -r requirements.txt
+npm install --global yarn
+yarn
+```
+
+And execute main.py script using:
+```sh
+python main.py
 ```
 
 ## About developing
