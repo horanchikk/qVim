@@ -1,3 +1,5 @@
+.gitignore
+.vscode
 node_modules
 yarn.lock
 commit.py

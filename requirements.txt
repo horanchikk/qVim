@@ -3,3 +3,4 @@ bs4
 flask
 flask-cors
 lxml
+psutil
