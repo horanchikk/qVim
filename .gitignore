@@ -3,3 +3,5 @@
 node_modules
 yarn.lock
 commit.py
+__pycache__
+py/__pycache__

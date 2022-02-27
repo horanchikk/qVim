@@ -18,9 +18,9 @@
 
     <div class="header-menu">
       <router-link to="/plugins"> <li class="header-elem">Plugins</li> </router-link>
-      <router-link to="/configs"> <li class="header-elem">Configs</li> </router-link>
-      <router-link to="/settings"> <li class="header-elem">Settings</li> </router-link>
-      <li class="header-elem">About</li>
+      <!-- <router-link to="/configs"> <li class="header-elem">Configs</li> </router-link> -->
+      <!-- <router-link to="/settings"> <li class="header-elem">Settings</li> </router-link> -->
+      <!-- <li class="header-elem">About</li> -->
     </div>
     <!-- <div class="header-turnoff">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24">
@@ -36,9 +36,9 @@
       </svg>
     </div> -->
   </header>
-  <div id="app">
+  <section id="app">
     <router-view />
-  </div>
+  </section>
 </template>
 
 

@@ -1,41 +1,48 @@
 <template>
-  <div class="wrapper">
-    <span class="cont_title">
-      <h1 class="title">Welcome to qVim!</h1>
-      <a class="description">It is qVim lol :D</a>
-    </span>
+  <div class="home__main">
+    <div class="home__cont">
+      <h1 class="cont__title">Welcome to qVim!</h1>
+      <a class="cont__desc">qVim - it is vim plugin manager with graphic interface. Here you can find some plugins and qVim install it to your favorite text editor automatically.</a>
+    </div>
+    <div class="home__cont">
+      <h2 class="cont__title">Why qVim?</h2>
+    </div>
   </div>
 </template>
 
 <script />
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
-
-.wrapper {
+.home__main {
   width: 640px;
-  height: 300px;
-  display: block;
+  display: flex;
+  flex-direction: row;
   margin-left: auto;
   margin-right: auto;
-  color: whitesmoke;
+  
 }
 
-.title {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 60px;
-  margin-left: 2%;
-  transform: translateY(-100%);
+.home__cont {
+  margin: 20px 10px 0px 0px;
+  padding: 10px;
+  border-radius: 13px;
+  color: whitesmoke;
+  background-color: #3d3d3d;
+}
+
+.cont__title {
   opacity: 0;
+  font-size: 60px;
+  text-align: center;
+  transform: translateY(-100%);
   animation: load 1s forwards;
 }
 
-.description {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 30px;
-  padding-left: 5%;
-  transform: translateY(-100%);
+.cont__desc {
   opacity: 0;
+  text-align: center;
+  font-size: 30px;
+  transform: translateY(-100%);
   animation: load 2s forwards;
 }
 

@@ -1,5 +1,5 @@
 import requests
-import subprocess
+from subprocess import PIPE, call
 import sys
 from time import sleep
 from bs4 import BeautifulSoup as bs
@@ -16,7 +16,7 @@ def traceback(err):
 
 def cmd(msg):
     devlogfile = open('out/config.log', 'w')
-    subprocess.call(msg, stdout=devlogfile, shell=True)
+    call(msg, stdout=devlogfile, shell=True)
     devlogfile.write('Waiting...')
 
 @app.route("/", methods=["GET"])
@@ -84,5 +84,5 @@ def stop():
     sys.exit(0)
     return 0
 
-def flaskrun():
-    app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    app.run(debug=False, port=5000)

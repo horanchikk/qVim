@@ -1,108 +1,101 @@
 <template>
-  <div class="settings-main">
-    <div class="settings-wrapper">
-      <div class="container">
-        <btn1 :title="'POST to flask server'" @click="postflask()" />
-        <btn1 :title="'GET to flask server'" @click="getflask()" />
-      </div>
+  <div class="settings__main">
+    <div class="settings__container">
+      <!-- <button class="settings__btn" @click="notify('Installing...', 'loop')">Install vim-plug</button> -->
     </div>
-    <div class="settings-wrapper">
-      <div class="container">
-        <div class="settings-container2">
-          <h1>Config</h1>
-          <textarea name="" id="cfg" cols="30" rows="10"></textarea>
-          <!-- textarea => config.vim -->
-        </div>
-        <btn1 :title="'Save and update'" />
-      </div>
+    <div class="settings__container">
+      <h1>world</h1>
     </div>
   </div>
-  <Notify :title="'hello'" :type="typein" />
+  <notify :type="typein" />
 </template>
 
 <script>
-import btn1 from "../components/btn1.vue";
-import Notify from "../components/notify.vue";
+import notify from "../components/notify.vue";
 
 export default {
-  components: {
-    btn1,
-    Notify,
-  },
   data() {
     return {
-      typein: "done",
-    };
+      typein: 'done',
+    }
   },
   methods: {
-    postflask() {
-      fetch("http://localhost:5000/config/change?type=vim", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-        body: JSON.stringify(document.getElementById("cfg").value),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("success: ", data);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-    },
+    async notify(message, icon) {
+      if (icon == 'done') {
+        this.typein = 'done';
+      } else if (icon == 'error') {
+        this.typein = 'error';
+      } else if (icon == 'loop') {
+        this.typein = 'loop'
+      } else if (icon == 'wifinot') {
+        this.typein = 'wifinot'
+      }
+
+      document.getElementById('notify-container-message').innerText = message;
+      let elem = document.getElementById('notify-container').style;
+      elem.display = "flex";
+
+      setTimeout(() => {
+        elem.opacity = '1';
+        elem.transform = "translateX(0%)";
+      }, 100)
+      setTimeout(() => {
+        elem.opacity = '0';
+        elem.transform = "translateX(-20%)";
+      }, 2000)
+      setTimeout(() => {
+        elem.display = "none";
+      }, 2400)
+    }
   },
-};
+  components: {
+    notify
+  }
+}
 </script>
 
-<style lang="scss">
-.settings-main {
-  width: 60%;
-  margin: 0 auto;
-  height: 100%;
-  display: flex;
-  margin-top: 40px;
+<style lang="scss" scoped>
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #131313;
 }
 
-.settings-wrapper {
+.settings__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.settings__container {
   width: 30%;
-  height: 70%;
-  background-color: #242424;
-  border-radius: 13px;
-  width: 50%;
-  height: 100%;
-  margin: 0 10px;
-}
-
-.settings-title {
-  font-size: 40px;
-  color: black;
-  text-align: center;
-}
-
-.container {
-  margin: 15px;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.settings-container2 {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 5px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin: 10px 10px;
+  background-color: #3d3d3d;
+  border-radius: 13px;
+  color: white;
+  opacity: 0;
+  padding: 10px;
+  transform: translateY(-100%);
+  animation: load3 1s forwards;
+}
 
-  h1 {
-    text-align: center;
-  }
+.settings__btn {
+  cursor: pointer;
+  width: 80%;
+  padding: 5px;
+  background: transparent;
+  border: 3px solid #b6b6b6;
+  color: #b6b6b6;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  transition: 0.1s ease-in;
+}
 
-  textarea {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    resize: none;
-  }
+.settings__btn:hover {
+  border: 3px solid #dddddd;
+  color: #dddddd;
 }
 </style>
