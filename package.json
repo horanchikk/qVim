@@ -8,12 +8,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "compression-webpack-plugin": "^9.2.0",
     "core-js": "^3.6.5",
     "primeicons": "^5.0.0",
     "primevue": "^3.10.0",
     "sass": "^1.48.0",
     "sass-loader": "^10",
     "vue": "^3.0.0",
+    "vue-cli-plugin-webpack-bundle-analyzer": "^4.0.0",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {

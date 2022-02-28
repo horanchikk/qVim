@@ -64,7 +64,7 @@
 .desc__welcome {
   text-align: center;
   animation: load 1s forwards;
-  animation-delay: .4s;
+  animation-delay: .5s;
 }
 
 .desc__welcome > a {
@@ -72,7 +72,6 @@
 }
 
 .desc__why {
-  list-style-type: circle;
   animation: load 1s forwards;
   animation-delay: 1s;
 }
