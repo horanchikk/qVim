@@ -59,7 +59,6 @@
 </template>
 
 <script>
-import notify from "../components/notify.vue";
 import progressbar from "../components/progressbar.vue"
 
 export default {
@@ -71,38 +70,10 @@ export default {
       pageLimit: 16,
       searchedPlugins: [],
       inputValue: "",
-      typein: 'done',
       debico: 'res',
     };
   },
   methods: {
-    async notify(message, icon) {
-      if (icon == 'done') {
-        this.typein = 'done';
-      } else if (icon == 'error') {
-        this.typein = 'error';
-      } else if (icon == 'loop') {
-        this.typein = 'loop'
-      } else if (icon == 'wifinot') {
-        this.typein = 'wifinot'
-      }
-
-      document.getElementById('notify-container-message').innerText = message;
-      let elem = document.getElementById('notify-container').style;
-      elem.display = "flex";
-
-      setTimeout(() => {
-        elem.opacity = '1';
-        elem.transform = "translateX(0%)";
-      }, 100)
-      setTimeout(() => {
-        elem.opacity = '0';
-        elem.transform = "translateX(-20%)";
-      }, 2000)
-      setTimeout(() => {
-        elem.display = "none";
-      }, 2400)
-    },
     async debug() {
       for (;;) {
         let res = await fetch(
@@ -143,6 +114,33 @@ export default {
         this.notify(`${name} has been installed!`, 'done')
       }
     },
+    async notify(message, icon) {
+      if (icon == 'done') {
+        this.typein = 'done';
+      } else if (icon == 'error') {
+        this.typein = 'error';
+      } else if (icon == 'loop') {
+        this.typein = 'loop'
+      } else if (icon == 'wifinot') {
+        this.typein = 'wifinot'
+      }
+
+      document.getElementById('notify-container-message').innerText = message;
+      let elem = document.getElementById('notify-container').style;
+      elem.display = "flex";
+
+      setTimeout(() => {
+        elem.opacity = '1';
+        elem.transform = "translateX(0%)";
+      }, 100)
+      setTimeout(() => {
+        elem.opacity = '0';
+        elem.transform = "translateX(-20%)";
+      }, 2000)
+      setTimeout(() => {
+        elem.display = "none";
+      }, 2400)
+    }, 
     setInputValue(value) {
       this.inputValue = value;
     },
@@ -152,7 +150,6 @@ export default {
     this.debug();
   },
   components: {
-    notify,
     progressbar
   }
 };

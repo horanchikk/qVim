@@ -1,7 +1,7 @@
 <template>
   <div class="settings__main">
     <div class="settings__container">
-      <!-- <button class="settings__btn" @click="notify('Installing...', 'loop')">Install vim-plug</button> -->
+      <button class="settings__btn" @click="notify('Installing...', 'loop')">Install vim-plug</button>
     </div>
     <div class="settings__container">
       <h1>world</h1>
@@ -79,7 +79,7 @@ body {
   opacity: 0;
   padding: 10px;
   transform: translateY(-100%);
-  animation: load3 1s forwards;
+  animation: load3 0.4s forwards;
 }
 
 .settings__btn {

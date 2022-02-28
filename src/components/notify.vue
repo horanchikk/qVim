@@ -43,6 +43,7 @@ export default {
   color: white;
   transform: translateX(-20%);
   transition: 0.2s ease-in-out;
+  z-index: 10;
 }
 
 .notify-container-icon {
