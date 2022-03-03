@@ -5,5 +5,5 @@ yarn.lock
 commit.py
 __pycache__
 py/__pycache__
-oldconfig.py
+oldconfig.json
 oldserver.py
