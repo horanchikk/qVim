@@ -1,7 +1,7 @@
 {
-    "settings": {
-        "server": "https://vimawesome.com/ or https://github.com/topics/vim-plugins",
-        "storage": "~/.config/nvim/init.vim",
-        "manager": "vim-plug"
-    }
+  "settings": {
+    "server": "https://vimawesome.com/ or https://github.com/topics/vim-plugins",
+    "storage": "~/.config/nvim/init.vim",
+    "manager": "vim-plug"
+  }
 }

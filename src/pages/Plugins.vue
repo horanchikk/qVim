@@ -27,7 +27,10 @@
             </div>
           </div>
 
-          <div class="shop_info_icon" @click='installpkg(plugin.link, plugin.name)'>
+          <div
+            class="shop_info_icon"
+            @click="installpkg(plugin.link, plugin.name)"
+          >
             <a
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +47,7 @@
       </template>
     </div>
     <div class="j-center">
-      <img src="../../public/loading.svg" class="shop_loader" v-if="loading"/>
+      <img src="../../public/loading.svg" class="shop_loader" v-if="loading" />
       <button
         v-else-if="!loading && currentPage <= pageLimit"
         @click="getPlugins"
@@ -53,13 +56,12 @@
         Load more
       </button>
     </div>
-    <notify :type="typein" />
     <progressbar :icon="debico" />
   </div>
 </template>
 
 <script>
-import progressbar from "../components/progressbar.vue"
+import progressbar from "../components/progressbar.vue";
 
 export default {
   data() {
@@ -70,29 +72,27 @@ export default {
       pageLimit: 16,
       searchedPlugins: [],
       inputValue: "",
-      debico: 'res',
+      debico: "res",
     };
   },
   methods: {
     async debug() {
       for (;;) {
-        let res = await fetch(
-          `http://localhost:5000/log`
-        );
+        let res = await fetch(`http://localhost:5000/log`);
         let restext = await res.text();
 
-        if (restext === 'Waiting...') {
-          this.debico = 'wait'
+        if (restext === "Waiting...") {
+          this.debico = "wait";
         } else {
-          this.debico = 'req'
+          this.debico = "req";
         }
 
-        document.getElementById('progressbar-messages').innerText = restext;  
+        document.getElementById("progressbar-messages").innerText = restext;
       }
-    },  
+    },
     async getPlugins() {
       this.loading = true;
-      this.notify(`Requesting to Flask server. Please wait...`, 'loop');
+      this.notify(`Requesting to Flask server. Please wait...`, "loop");
       const data = await fetch(
         `http://localhost:5000/topics?page=${this.currentPage}`
       );
@@ -105,42 +105,42 @@ export default {
       this.loading = false;
     },
     async installpkg(link, name) {
-      this.notify(`Installing ${name}...`, 'loop');
+      this.notify(`Installing ${name}...`, "loop");
       const req = await fetch(
-        `http://localhost:5000/install?link=${link.toString()}`
-      ); 
+        `http://localhost:5000/pluginstall?link=${link.toString()}`
+      );
       const ans = await req.text();
-      if (ans === 'ok') {
-        this.notify(`${name} has been installed!`, 'done')
+      if (ans === "ok") {
+        this.notify(`${name} has been installed!`, "done");
       }
     },
     async notify(message, icon) {
-      if (icon == 'done') {
-        this.typein = 'done';
-      } else if (icon == 'error') {
-        this.typein = 'error';
-      } else if (icon == 'loop') {
-        this.typein = 'loop'
-      } else if (icon == 'wifinot') {
-        this.typein = 'wifinot'
+      if (icon == "done") {
+        this.typein = "done";
+      } else if (icon == "error") {
+        this.typein = "error";
+      } else if (icon == "loop") {
+        this.typein = "loop";
+      } else if (icon == "wifinot") {
+        this.typein = "wifinot";
       }
 
-      document.getElementById('notify-container-message').innerText = message;
-      let elem = document.getElementById('notify-container').style;
+      document.getElementById("notify-container-message").innerText = message;
+      let elem = document.getElementById("notify-container").style;
       elem.display = "flex";
 
       setTimeout(() => {
-        elem.opacity = '1';
+        elem.opacity = "1";
         elem.transform = "translateX(0%)";
-      }, 100)
+      }, 100);
       setTimeout(() => {
-        elem.opacity = '0';
+        elem.opacity = "0";
         elem.transform = "translateX(-20%)";
-      }, 2000)
+      }, 2000);
       setTimeout(() => {
         elem.display = "none";
-      }, 2400)
-    }, 
+      }, 2400);
+    },
     setInputValue(value) {
       this.inputValue = value;
     },
@@ -150,8 +150,8 @@ export default {
     this.debug();
   },
   components: {
-    progressbar
-  }
+    progressbar,
+  },
 };
 </script>
 

@@ -31,7 +31,9 @@
     </div>
 
     <div class="header-menu">
-      <router-link to="/plugins"> <li class="header-elem">Plugins</li> </router-link>
+      <router-link to="/plugins">
+        <li class="header-elem">Plugins</li>
+      </router-link>
       <!-- <router-link to="/configs"> <li class="header-elem">Configs</li> </router-link> -->
       <!-- <router-link to="/settings"> <li class="header-elem">Settings</li> </router-link> -->
       <!-- <li class="header-elem">About</li> -->
@@ -63,52 +65,53 @@ import notify from "./components/notify.vue";
 export default {
   data() {
     return {
-      typein: 'done',
+      typein: "done",
     };
   },
   methods: {
+    async notify(message, icon) {
+      if (icon == "done") {
+        this.typein = "done";
+      } else if (icon == "error") {
+        this.typein = "error";
+      } else if (icon == "loop") {
+        this.typein = "loop";
+      } else if (icon == "wifinot") {
+        this.typein = "wifinot";
+      }
+
+      document.getElementById("notify-container-message").innerText = message;
+      let elem = document.getElementById("notify-container").style;
+      elem.display = "flex";
+
+      setTimeout(() => {
+        elem.opacity = "1";
+        elem.transform = "translateX(0%)";
+      }, 100);
+      setTimeout(() => {
+        elem.opacity = "0";
+        elem.transform = "translateX(-20%)";
+      }, 2000);
+      setTimeout(() => {
+        elem.display = "none";
+      }, 2400);
+    },
     async alertclose() {
-      let container = document.getElementById('vim-alert-container').style;
-      let bg = document.getElementById('vim-alert-bg').style;
+      let container = document.getElementById("vim-alert-container").style;
+      let bg = document.getElementById("vim-alert-bg").style;
       container.transform = "translate(-50%, -300%)";
       bg.background = "rgb(0 0 0 / 0)";
       setTimeout(() => {
         bg.display = "none";
-      }, 600)
-    },
-    async notify(message, icon) {
-      if (icon == 'done') {
-        this.typein = 'done';
-      } else if (icon == 'error') {
-        this.typein = 'error';
-      } else if (icon == 'loop') {
-        this.typein = 'loop'
-      } else if (icon == 'wifinot') {
-        this.typein = 'wifinot'
-      }
-
-      document.getElementById('notify-container-message').innerText = message;
-      let elem = document.getElementById('notify-container').style;
-      elem.display = "flex";
-
-      setTimeout(() => {
-        elem.opacity = '1';
-        elem.transform = "translateX(0%)";
-      }, 100)
-      setTimeout(() => {
-        elem.opacity = '0';
-        elem.transform = "translateX(-20%)";
-      }, 2000)
-      setTimeout(() => {
-        elem.display = "none";
-      }, 2400)
+      }, 600);
+      this.notify("Installing vim-plug...", "loop");
     },
   },
   components: {
     notify,
     // btn1
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss">
@@ -140,7 +143,7 @@ body {
   display: flex;
   flex-direction: column;
   transform: translate(-50%, -50%);
-  background-color: rgb( 50 50 50 / 1);
+  background-color: rgb(50 50 50 / 1);
   color: whitesmoke;
   padding: 15px;
   border-radius: 13px;

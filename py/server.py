@@ -1,6 +1,6 @@
 import requests
-from subprocess import PIPE, call
-import sys
+from subprocess import call
+from sys import exit, platform
 from time import sleep
 from bs4 import BeautifulSoup as bs
 from flask import Flask, request, jsonify
@@ -10,18 +10,22 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['Access-Control-Allow-Origin'] = '*'
+devlogfile = open('out/config.log', 'w')
+
 
 def traceback(err):
     return '[{"name": "Traceback", "descs": "' + str(err) + '"}]'
 
+
 def cmd(msg):
-    devlogfile = open('out/config.log', 'w')
-    call(msg, stdout=devlogfile, shell=True)
+    call(msg, stdout=devlogfile)
     devlogfile.write('Waiting...')
+
 
 @app.route("/", methods=["GET"])
 def mainpage():
     return "", 200
+
 
 @app.route("/topics", methods=["GET"])
 def topics():
@@ -39,36 +43,74 @@ def topics():
     response = requests.get(url)
 
     soup = bs(response.text, 'lxml')
-    
+
     names = soup.select(".px-3 > .d-flex > .d-flex > .f3 > .text-bold")
     descs = soup.select(".color-bg-default > .px-3 > div")
-    links = soup.select(".px-3 > .d-flex > .d-flex > .f3 > .text-bold", href=True)
-    
+    links = soup.select(
+        ".px-3 > .d-flex > .d-flex > .f3 > .text-bold", href=True)
+
     try:
         for i in range(len(names)):
             namereq = names[i].decode_contents()
-            fixname = namereq.replace("\n","").replace(" ","")
+            fixname = namereq.replace("\n", "").replace(" ", "")
             descreq = descs[i].text
             fixdesc = descreq.replace("\n", "")
-            link = "https://github.com" + str(links[i]['href'])
-            texts.append({'name':fixname, 'description':fixdesc, 'link':link})
+            link = str(links[i]['href'])
+            texts.append(
+                {'name': fixname, 'description': fixdesc, 'link': link})
     except Exception as e:
         print(app.logger.warn(e))
 
     response = jsonify(texts)
-    
+
     match texts:
         case []:
             return "", 400
     return response
 
-@app.route("/install", methods=["GET"])
-def install():
-    link = request.args.get('link')
-    print(link)
+
+@app.route("/pluginstall", methods=["GET"])
+def pluginstall():
+    res = request.args.get('link')
+    link = res[1:]
+    print(f'\n{link}')
     sleep(1)
-    cmd(f'curl {link}')
-    return 'ok', 200
+    match platform:
+        case 'win32':
+            cmd(
+                f""" "C:/Program Files/Neovim/bin/nvim.exe" --headless +"Plug '{link}'" +PlugInstall +qall """)
+            return 'ok', 200
+        case 'linux':
+            cmd('nvim --headless +PlugUpdate +qall')
+            return 'ok', 200
+        case 'darwin':
+            return 'Mac OS systems is not supported!', 404
+
+
+@app.route("/mginstall", methods=["GET"])
+def mginstall():
+    match platform:
+        case 'win32':
+            cmd('powershell ./scripts/install.ps1')
+            return
+        case 'linux':
+            pass
+        case 'darwin':
+            return 'Mac OS systems is not supported!'
+
+
+@app.route("/plugupdate", methods=["GET"])
+def plugupdate():
+    match platform:
+        case 'win32':
+            cmd('powershell ./scripts/install.ps1')
+            return 'ok'
+        case 'linux':
+            cmd('nvim --headless +PlugUpdate +qall')
+            return 'ok'
+        case 'darwin':
+            return 'Mac OS systems is not supported!', 404
+
 
 @app.route("/log", methods=["GET"])
 def logging():
@@ -79,10 +121,12 @@ def logging():
     except:
         return "", 200
 
+
 @app.route("/stop", methods=["GET"])
 def stop():
-    sys.exit(0)
+    exit(0)
     return 0
+
 
 if __name__ == "__main__":
     app.run(debug=False, port=5000)

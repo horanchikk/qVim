@@ -1,7 +1,9 @@
 <template>
   <div class="settings__main">
     <div class="settings__container">
-      <button class="settings__btn" @click="notify('Installing...', 'loop')">Install vim-plug</button>
+      <button class="settings__btn" @click="notify('Installing...', 'loop')">
+        Install vim-plug
+      </button>
     </div>
     <div class="settings__container">
       <h1>world</h1>
@@ -16,42 +18,42 @@ import notify from "../components/notify.vue";
 export default {
   data() {
     return {
-      typein: 'done',
-    }
+      typein: "done",
+    };
   },
   methods: {
     async notify(message, icon) {
-      if (icon == 'done') {
-        this.typein = 'done';
-      } else if (icon == 'error') {
-        this.typein = 'error';
-      } else if (icon == 'loop') {
-        this.typein = 'loop'
-      } else if (icon == 'wifinot') {
-        this.typein = 'wifinot'
+      if (icon == "done") {
+        this.typein = "done";
+      } else if (icon == "error") {
+        this.typein = "error";
+      } else if (icon == "loop") {
+        this.typein = "loop";
+      } else if (icon == "wifinot") {
+        this.typein = "wifinot";
       }
 
-      document.getElementById('notify-container-message').innerText = message;
-      let elem = document.getElementById('notify-container').style;
+      document.getElementById("notify-container-message").innerText = message;
+      let elem = document.getElementById("notify-container").style;
       elem.display = "flex";
 
       setTimeout(() => {
-        elem.opacity = '1';
+        elem.opacity = "1";
         elem.transform = "translateX(0%)";
-      }, 100)
+      }, 100);
       setTimeout(() => {
-        elem.opacity = '0';
+        elem.opacity = "0";
         elem.transform = "translateX(-20%)";
-      }, 2000)
+      }, 2000);
       setTimeout(() => {
         elem.display = "none";
-      }, 2400)
-    }
+      }, 2400);
+    },
   },
   components: {
-    notify
-  }
-}
+    notify,
+  },
+};
 </script>
 
 <style lang="scss" scoped>

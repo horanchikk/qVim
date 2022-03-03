@@ -2,7 +2,11 @@
   <div class="home__main">
     <div class="home__cont">
       <h1 class="cont__title">Welcome to qVim!</h1>
-      <p class="cont__desc desc__welcome"><a href="https://github.com/horanDEV/qVim">qVim</a> - it is vim plugin manager with graphic interface. Here you can find some plugins and qVim install it to your favorite text editor automatically.</p>
+      <p class="cont__desc desc__welcome">
+        <a href="https://github.com/horanDEV/qVim">qVim</a> - it is vim plugin
+        manager with graphic interface. Here you can find some plugins and qVim
+        install it to your favorite text editor automatically.
+      </p>
     </div>
     <div class="home__cont">
       <h2 class="cont__title">Why qVim?</h2>
@@ -11,7 +15,9 @@
           <li>This is more convenient than using the default terminal</li>
           <li>It is using vim-plug technology</li>
           <li>You can manage your plugins</li>
-          <li>You can load your favorite config and qVim can working with it</li>
+          <li>
+            You can load your favorite config and qVim can working with it
+          </li>
           <li>Store of configs for vim in one utility</li>
           <li>And many functions for easiest plugin management...</li>
         </ul>
@@ -19,7 +25,15 @@
     </div>
     <div class="home__cont">
       <h2 class="cont__title">About developing</h2>
-      <p class="cont__desc desc__dev">Our product is currently under development, so some functions may not be working. Please, wait, when product has been released. If you have any suggestions for improving the product or you have found a bug, please contact us: <a href="mailto:horandev.service@gmail.com">horandev.service@gmail.com</a>.</p>
+      <p class="cont__desc desc__dev">
+        Our product is currently under development, so some functions may not be
+        working. Please, wait, when product has been released. If you have any
+        suggestions for improving the product or you have found a bug, please
+        contact us:
+        <a href="mailto:horandev.service@gmail.com"
+          >horandev.service@gmail.com</a
+        >.
+      </p>
     </div>
   </div>
 </template>
@@ -27,7 +41,6 @@
 <script />
 
 <style>
-
 .home__main {
   display: flex;
   flex-direction: column;
@@ -64,7 +77,7 @@
 .desc__welcome {
   text-align: center;
   animation: load 1s forwards;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 .desc__welcome > a {

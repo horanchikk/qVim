@@ -10,6 +10,7 @@ else:
     python = 'python3.10 '
     pip = 'pip3.10 '
 
+
 def pyver():
     testme = 'ok'
     try:
@@ -20,13 +21,14 @@ def pyver():
     except SyntaxError:
         raise PermissionError('Your python version is not supported!')
 
+
 def pkgs():
     try:
-        import requests, bs4, flask, lxml, psutil, flask_cors
         print('pkgs is ok')
     except ImportError as e:
         shell(f'{pip}install -r requirements.txt')
         # shell(f'{python} main.py')
+
 
 def serverstats():
     try:
@@ -42,7 +44,9 @@ def serverstats():
             serverreq = "404"
         if serverreq != 200:
             sleep(2)
-            raise ConnectionAbortedError(f'Lost connection to http://localhost:5000. Status code: {serverreq}')
+            raise ConnectionAbortedError(
+                f'Lost connection to http://localhost:5000. Status code: {serverreq}')
+
 
 def test():
     pyver()
