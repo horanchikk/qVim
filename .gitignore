@@ -7,3 +7,5 @@ __pycache__
 py/__pycache__
 oldconfig.json
 oldserver.py
+.prettierignore
+.prettierrc

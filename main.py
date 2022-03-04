@@ -1,13 +1,18 @@
-from psutil import process_iter
-from tests import test, serverstats
-import multiprocessing
+
+
 from sys import path
-from subprocess import PIPE, call
-from webbrowser import open_new_tab
-from time import sleep
-from sys import platform
-# Import from /py
 path.insert(1, 'py/')
+from tests import test, serverstats
+from sys import platform
+from time import sleep
+from webbrowser import open_new_tab
+from subprocess import PIPE, call
+import multiprocessing
+from psutil import process_iter
+
+
+# Import from /py
+
 
 if platform == 'win32':
     python = 'python'
@@ -44,7 +49,7 @@ def server(args):
         case 'kill':
             g.kill()
             j.kill()
-
+            
             for proc in process_iter():
                 if proc.name() == 'node.exe':
                     proc.kill()
@@ -54,10 +59,8 @@ def server(args):
             g.start()
             j.start()
             serverstats()
-            sleep(5)
+            sleep(2)
             open_new_tab('http://localhost:8080')
-            print('\n\nLoading yarn...\n\n')
-
             while True:
                 sleep(10000)
 

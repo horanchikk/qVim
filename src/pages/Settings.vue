@@ -1,12 +1,10 @@
 <template>
   <div class="settings__main">
-    <div class="settings__container">
-      <button class="settings__btn" @click="notify('Installing...', 'loop')">
-        Install vim-plug
-      </button>
-    </div>
-    <div class="settings__container">
-      <h1>world</h1>
+    <div class="settings__container"></div>
+    <div class="settings__container" style="background-color: rgba(0, 0, 0, 0)">
+      <h2>Config</h2>
+      <textarea name="config" id="config" cols="30" rows="10"></textarea>
+      <btn1 :title="'Save & Update'" @click="uploadConfig()" />
     </div>
   </div>
   <notify :type="typein" />
@@ -14,6 +12,7 @@
 
 <script>
 import notify from "../components/notify.vue";
+import btn1 from "../components/btn1.vue";
 
 export default {
   data() {
@@ -49,9 +48,14 @@ export default {
         elem.display = "none";
       }, 2400);
     },
+    async uploadConfig() {
+      let config = document.getElementById("config").value;
+      this.notify(config, "done");
+    },
   },
   components: {
     notify,
+    btn1,
   },
 };
 </script>
@@ -73,6 +77,7 @@ body {
 .settings__container {
   width: 30%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 10px 10px;
   background-color: #3d3d3d;
@@ -82,6 +87,25 @@ body {
   padding: 10px;
   transform: translateY(-100%);
   animation: load3 0.4s forwards;
+  text-align: center;
+}
+
+textarea {
+  resize: none;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  outline: none;
+  background-color: #3d3d3d;
+  color: whitesmoke;
+  border-radius: 3px;
+  padding: 10px;
+  font-family: sans-serif;
+  transition: 0.3s ease-in-out;
+
+  &:focus {
+    outline: 1px solid rgb(200, 200, 0);
+  }
 }
 
 .settings__btn {
