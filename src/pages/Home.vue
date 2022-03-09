@@ -84,7 +84,8 @@
   text-decoration: none;
 }
 
-.desc__why {
+.desc__why > ul > li {
+  opacity: 0;
   animation: load 1s forwards;
   animation-delay: 1s;
 }
