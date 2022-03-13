@@ -9,3 +9,5 @@ oldconfig.json
 oldserver.py
 .prettier*
 package-lock.json
+out/config.log
+out/server.log
