@@ -1,6 +1,6 @@
 <template>
   <div class="shop-container">
-    <div class="shop_search">
+    <div class="shop__search">
       <input
         type="text"
         placeholder="Find plugin..."
@@ -62,6 +62,7 @@
 
 <script>
 import progressbar from "../components/progressbar.vue";
+import { animations } from "../components/mixins/global.js";
 
 export default {
   data() {
@@ -73,8 +74,13 @@ export default {
       searchedPlugins: [],
       inputValue: "",
       debico: "res",
+      editor: "none",
     };
   },
+  components: {
+    progressbar,
+  },
+  mixins: [animations],
   methods: {
     async debug() {
       for (;;) {
@@ -109,48 +115,24 @@ export default {
       const req = await fetch(
         `http://localhost:5000/pluginstall?link=${link.toString()}`
       );
-      const ans = await req.text();
-      if (ans === "ok") {
+      const res = await req.text();
+      if (res === "ok") {
         this.notify(`${name} has been installed!`, "done");
       }
     },
-    async notify(message, icon) {
-      if (icon == "done") {
-        this.typein = "done";
-      } else if (icon == "error") {
-        this.typein = "error";
-      } else if (icon == "loop") {
-        this.typein = "loop";
-      } else if (icon == "wifinot") {
-        this.typein = "wifinot";
+    async editorcheck() {
+      const req = await fetch(`http://localhost:5000/vimcheck`);
+      const res = await req.json();
+      if (res.editor === "none") {
+        return undefined;
       }
-
-      document.getElementById("notify-container-message").innerText = message;
-      let elem = document.getElementById("notify-container").style;
-      elem.display = "flex";
-
-      setTimeout(() => {
-        elem.opacity = "1";
-        elem.transform = "translateX(0%)";
-      }, 100);
-      setTimeout(() => {
-        elem.opacity = "0";
-        elem.transform = "translateX(-20%)";
-      }, 2000);
-      setTimeout(() => {
-        elem.display = "none";
-      }, 2400);
-    },
-    setInputValue(value) {
-      this.inputValue = value;
+      this.editor = res.editor;
     },
   },
   async mounted() {
     this.getPlugins();
     this.debug();
-  },
-  components: {
-    progressbar,
+    this.editorcheck();
   },
 };
 </script>
@@ -182,7 +164,7 @@ export default {
   animation: load3 1s forwards;
 }
 
-.shop_search {
+.shop__search {
   position: absolute;
   margin-top: 10px;
   width: 15%;

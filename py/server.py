@@ -10,7 +10,8 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['Access-Control-Allow-Origin'] = '*'
-devlogfile = open('out/config.log', 'w')
+with open('out/config.log', 'w') as devlogfile:
+    devlogfile.write('Waiting...')
 
 
 def traceback(err):
@@ -18,14 +19,32 @@ def traceback(err):
 
 
 def cmd(msg):
-    call(msg, stdout=devlogfile)
-    devlogfile.write('Waiting...')
+    with open('out/config.log', 'w') as devlogfile:
+        result = call(msg, stdout=devlogfile, shell=True)
+        match result:
+            case 1:
+                devlogfile.write('Failed!')
+                return False
+            case 0:
+                devlogfile.write('Waiting...')
+                return True
 
 
 @app.route("/", methods=["GET"])
 def mainpage():
     return "", 200
 
+@app.route("/vimcheck", methods=["GET"])
+def vimcheck():
+    match cmd('nvim --headless +qall'):
+        case False:
+            match cmd('vim --headless +qall'):
+                case False:
+                    return jsonify(editor='none')
+                case True:
+                    return jsonify(editor='vim')
+        case True:
+            return jsonify(editor='nvim')
 
 @app.route("/topics", methods=["GET"])
 def topics():
@@ -68,7 +87,6 @@ def topics():
             return "", 400
     return response
 
-
 @app.route("/pluginstall", methods=["GET"])
 def pluginstall():
     res = request.args.get('link')
@@ -81,29 +99,29 @@ def pluginstall():
                 f""" "C:/Program Files/Neovim/bin/nvim.exe" --headless +"Plug '{link}'" +PlugInstall +qall """)
             return 'ok', 200
         case 'linux':
-            cmd('nvim --headless +PlugUpdate +qall')
+            cmd(f"""nvim --headless +"Plug '{link}'" +PlugInstall +qall""")
             return 'ok', 200
         case 'darwin':
             return 'Mac OS systems is not supported!', 404
-
 
 @app.route("/mginstall", methods=["GET"])
 def mginstall():
     match platform:
         case 'win32':
             cmd('powershell ./scripts/install.ps1')
-            return
+            return 'ok', 200
         case 'linux':
             pass
         case 'darwin':
             return 'Mac OS systems is not supported!'
 
-
 @app.route("/plugupdate", methods=["GET"])
 def plugupdate():
     match platform:
         case 'win32':
-            cmd('powershell ./scripts/install.ps1')
+            cmd(
+                """ "C:/Program Files/Neovim/bin/nvim.exe" --headless +PlugUpdate +qall """
+            )
             return 'ok'
         case 'linux':
             cmd('nvim --headless +PlugUpdate +qall')
@@ -120,7 +138,6 @@ def logging():
         return devlogrd, 200
     except:
         return "", 200
-
 
 @app.route("/stop", methods=["GET"])
 def stop():

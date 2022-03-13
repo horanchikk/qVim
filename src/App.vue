@@ -1,19 +1,6 @@
 <template>
-  <!-- <div class="vim-alert-bg" id="vim-alert-bg">
-    <div class="vim-alert-container" id="vim-alert-container">
-      <h1 class="vim-alert-container-title">
-        Warning!
-      </h1>
-      <h2 class="vim-alert-container-description">
-        For the program to work correctly, you need to install vim-plug. Install?
-      </h2>
-      <li class="vim-alert-container-btns">
-        <btn1 :title="'Yes'" @click="alertclose()" />
-        <btn1 :title="'No'" @click="alertclose()"/>
-      </li>
-    </div>
-  </div> -->
-  <header class="header-container">
+  <alertWindow />
+  <header class="header-container" id="header-container">
     <div class="header-img">
       <router-link to="/">
         <svg
@@ -52,15 +39,16 @@
       </svg>
     </div> -->
   </header>
-  <section id="app">
+  <section id="main-container">
     <router-view />
   </section>
   <notify :type="typein" />
 </template>
 
 <script>
-import notify from "./components/notify.vue";
-// import btn1 from "./components/btn1.vue";
+import notify from "./components/notify";
+import alertWindow from "./components/alertWindow";
+import { animations } from "./components/mixins/global.js";
 
 export default {
   data() {
@@ -68,48 +56,10 @@ export default {
       typein: "done",
     };
   },
-  methods: {
-    async notify(message, icon) {
-      if (icon == "done") {
-        this.typein = "done";
-      } else if (icon == "error") {
-        this.typein = "error";
-      } else if (icon == "loop") {
-        this.typein = "loop";
-      } else if (icon == "wifinot") {
-        this.typein = "wifinot";
-      }
-
-      document.getElementById("notify-container-message").innerText = message;
-      let elem = document.getElementById("notify-container").style;
-      elem.display = "flex";
-
-      setTimeout(() => {
-        elem.opacity = "1";
-        elem.transform = "translateX(0%)";
-      }, 100);
-      setTimeout(() => {
-        elem.opacity = "0";
-        elem.transform = "translateX(-20%)";
-      }, 2000);
-      setTimeout(() => {
-        elem.display = "none";
-      }, 2400);
-    },
-    async alertclose() {
-      let container = document.getElementById("vim-alert-container").style;
-      let bg = document.getElementById("vim-alert-bg").style;
-      container.transform = "translate(-50%, -300%)";
-      bg.background = "rgb(0 0 0 / 0)";
-      setTimeout(() => {
-        bg.display = "none";
-      }, 600);
-      this.notify("Installing vim-plug...", "loop");
-    },
-  },
+  mixins: [animations],
   components: {
     notify,
-    // btn1
+    alertWindow,
   },
 };
 </script>
@@ -122,43 +72,6 @@ body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
   background-color: #131313;
-}
-
-.vim-alert-bg {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  cursor: default;
-  background-color: rgb(0 0 0 / 0.7);
-  z-index: 1;
-  transition: 0.6s ease-in-out;
-}
-
-.vim-alert-container {
-  position: absolute;
-  width: 400px;
-  height: 300px;
-  top: 50%;
-  left: 50%;
-  display: flex;
-  flex-direction: column;
-  transform: translate(-50%, -50%);
-  background-color: rgb(50 50 50 / 1);
-  color: whitesmoke;
-  padding: 15px;
-  border-radius: 13px;
-  transition: 0.4s ease-in-out;
-  border: yellow solid 1px;
-}
-
-.vim-alert-container-title {
-  text-align: center;
-}
-
-.vim-alert-container-btns {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
 }
 
 .settings-container {
@@ -175,6 +88,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Dongle", sans-serif;
+  transition: 0.6s ease-in-out;
 }
 
 .header-elem {
@@ -279,5 +193,9 @@ body {
       font-size: 30px;
     }
   }
+}
+
+.main-container {
+  transition: 0.6s ease-in-out;
 }
 </style>

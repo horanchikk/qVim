@@ -1,5 +1,3 @@
-
-
 from sys import path
 path.insert(1, 'py/')
 from tests import test, serverstats

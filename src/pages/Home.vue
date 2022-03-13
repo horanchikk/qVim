@@ -1,5 +1,5 @@
 <template>
-  <div class="home__main">
+  <div class="home">
     <div class="home__cont">
       <h1 class="cont__title">Welcome to qVim!</h1>
       <p class="cont__desc desc__welcome">
@@ -41,7 +41,7 @@
 <script />
 
 <style>
-.home__main {
+.home {
   display: flex;
   flex-direction: column;
   margin-left: 20%;
@@ -66,7 +66,6 @@
 }
 
 .cont__desc {
-  opacity: 0;
   transform: translateY(-100%);
   font-size: 30px;
   line-height: 3rem;
@@ -75,6 +74,7 @@
 /* Desc */
 
 .desc__welcome {
+  opacity: 0;
   text-align: center;
   animation: load 1s forwards;
   animation-delay: 0.5s;
@@ -91,6 +91,7 @@
 }
 
 .desc__dev {
+  opacity: 0;
   list-style-type: circle;
   animation: load 1s forwards;
   animation-delay: 1.5s;

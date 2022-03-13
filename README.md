@@ -1,7 +1,9 @@
-#  Welcome to qVim!
+# Welcome to qVim!
+
 qVim - it is vim plugin manager with graphic interface. Here you can find some plugins and qVim install it to your favorite text editor automatically.
 
 ## Why qVim?
+
 - This is more convenient than using the default terminal
 - It is using vim-plug technology
 - You can manage your plugins
@@ -10,9 +12,10 @@ qVim - it is vim plugin manager with graphic interface. Here you can find some p
 - And many functions for easiest plugin management...
 
 ## Requirements
- - Python 3.10 or later
- - Node.JS
- 
+
+- Python 3.10 or later
+- Node.JS 16.14.X
+
 ## First launch
 
 Install all dependencies:
@@ -24,9 +27,11 @@ yarn
 ```
 
 And execute main.py script using:
+
 ```sh
 python main.py
 ```
 
 ## About developing
+
 Our product is currently under development, so some functions may not be working. Please, wait, when product has been released. If you have any suggestions for improving the product or you have found a bug, please contact us: horandev.service@gmail.com.
