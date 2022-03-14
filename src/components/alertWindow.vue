@@ -1,4 +1,5 @@
 <template>
+ <Transition name="fade">
   <div v-if="isShowing" class="vim-alert-bg" id="vim-alert-bg">
     <div class="vim-alert-container" id="vim-alert-container">
       <h1 class="vim-alert-container-title">Warning!</h1>
@@ -6,17 +7,15 @@
         For the program to work correctly, you need to install vim-plug.
         Install?
       </h2>
-      <li class="vim-alert-container-btns">
-        <btn1 :title="'Yes'" @click="$emit('alertres', true)" />
-        <btn1 :title="'No'" @click="$emit('alertres', false)" />
-      </li>
+      <btn1 :title="'Yes'" @click="$emit('alertres', true)" />
+      <btn1 :title="'No'" @click="$emit('alertres', false)" />
     </div>
   </div>
+ </Transition>
 </template>
 
 <script>
 import btn1 from "../components/btn1.vue";
-import { animations } from "../components/mixins/global.js";
 export default {
   emits: ["alertres"],
   props: {
@@ -33,7 +32,6 @@ export default {
       this.$emit("alertres", false);
     },
   },
-  mixins: [animations],
 };
 </script>
 
@@ -50,8 +48,8 @@ export default {
 }
 .vim-alert-container {
   position: absolute;
-  width: 400px;
-  height: 300px;
+  width: 50%;
+  height: 30%;
   top: 50%;
   left: 50%;
   display: flex;
@@ -71,5 +69,15 @@ export default {
   display: flex;
   flex-direction: row;
   width: 100%;
+}
+/* Vue transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

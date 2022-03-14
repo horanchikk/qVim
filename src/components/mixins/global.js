@@ -27,16 +27,5 @@ export const animations = {
         elem.display = "none";
       }, 2400);
     },
-    async alertclose() {
-      let container = document.getElementById("vim-alert-container").style;
-      let bg = document.getElementById("vim-alert-bg").style;
-      container.transform = "translate(-50%, -300%)";
-      bg.background = "rgb(0 0 0 / 0)";
-      setTimeout(() => {
-        bg.display = "none";
-        document.getElementById("main-container").style.filter = "blur(0px)";
-        document.getElementById("header-container").style.filter = "blur(0px)";
-      }, 600);
-    },
   },
 };

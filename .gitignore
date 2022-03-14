@@ -11,3 +11,6 @@ oldserver.py
 package-lock.json
 out/config.log
 out/server.log
+config.log
+server.log
+*.log	
