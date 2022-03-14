@@ -7,8 +7,8 @@
         Install?
       </h2>
       <li class="vim-alert-container-btns">
-        <btn1 :title="'Yes'" @click="resTrue" />
-        <btn1 :title="'No'" @click="resFalse" />
+        <btn1 :title="'Yes'" @click="$emit('alertres', true)" />
+        <btn1 :title="'No'" @click="$emit('alertres', false)" />
       </li>
     </div>
   </div>
@@ -17,13 +17,10 @@
 <script>
 import btn1 from "../components/btn1.vue";
 import { animations } from "../components/mixins/global.js";
-
 export default {
+  emits: ["alertres"],
   props: {
-    isShowing: {
-      type: Boolean,
-      required: true,
-    },
+    isShowing: Boolean,
   },
   components: {
     btn1,
@@ -51,7 +48,6 @@ export default {
   z-index: 1;
   transition: 0.6s ease-in-out;
 }
-
 .vim-alert-container {
   position: absolute;
   width: 400px;
@@ -68,11 +64,9 @@ export default {
   transition: 0.4s ease-in-out;
   border: yellow solid 1px;
 }
-
 .vim-alert-container-title {
   text-align: center;
 }
-
 .vim-alert-container-btns {
   display: flex;
   flex-direction: row;

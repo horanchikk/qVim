@@ -1,5 +1,4 @@
 <template>
-  <alertWindow />
   <header class="header-container" id="header-container">
     <div class="header-img">
       <router-link to="/">
@@ -50,8 +49,6 @@
 
 <script>
 import notify from "./components/notify";
-import alertWindow from "./components/alertWindow";
-import { animations } from "./components/mixins/global.js";
 
 export default {
   data() {
@@ -59,10 +56,8 @@ export default {
       typein: "done",
     };
   },
-  mixins: [animations],
   components: {
     notify,
-    alertWindow,
   },
 };
 </script>
