@@ -1,5 +1,5 @@
 <template>
-  <div class="vim-alert-bg" id="vim-alert-bg">
+  <div v-if="isShowing" class="vim-alert-bg" id="vim-alert-bg">
     <div class="vim-alert-container" id="vim-alert-container">
       <h1 class="vim-alert-container-title">Warning!</h1>
       <h2 class="vim-alert-container-description">
@@ -7,8 +7,8 @@
         Install?
       </h2>
       <li class="vim-alert-container-btns">
-        <btn1 :title="'Yes'" @click="install()" />
-        <btn1 :title="'No'" @click="alertclose()" />
+        <btn1 :title="'Yes'" @click="resTrue" />
+        <btn1 :title="'No'" @click="resFalse" />
       </li>
     </div>
   </div>
@@ -19,8 +19,22 @@ import btn1 from "../components/btn1.vue";
 import { animations } from "../components/mixins/global.js";
 
 export default {
+  props: {
+    isShowing: {
+      type: Boolean,
+      required: true,
+    },
+  },
   components: {
     btn1,
+  },
+  methods: {
+    resTrue() {
+      this.$emit("alertres", true);
+    },
+    resFalse() {
+      this.$emit("alertres", false);
+    },
   },
   mixins: [animations],
 };
@@ -30,7 +44,7 @@ export default {
 .vim-alert-bg {
   width: 100%;
   height: 100%;
-  display: none;
+  display: block;
   position: fixed;
   cursor: default;
   background-color: rgb(0 0 0 / 0.7);

@@ -21,6 +21,9 @@
       <router-link to="/plugins">
         <li class="header-elem">Plugins</li>
       </router-link>
+      <router-link to="/debug">
+        <li class="header-elem" style="color: red">Debug Menu</li>
+      </router-link>
       <!-- <router-link to="/configs"> <li class="header-elem">Configs</li> </router-link> -->
       <!-- <router-link to="/settings"> <li class="header-elem">Settings</li> </router-link> -->
       <!-- <li class="header-elem">About</li> -->

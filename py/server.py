@@ -34,6 +34,7 @@ def cmd(msg):
 def mainpage():
     return "", 200
 
+
 @app.route("/vimcheck", methods=["GET"])
 def vimcheck():
     match cmd('nvim --headless +qall'):
@@ -45,6 +46,7 @@ def vimcheck():
                     return jsonify(editor='vim')
         case True:
             return jsonify(editor='nvim')
+
 
 @app.route("/topics", methods=["GET"])
 def topics():
@@ -87,6 +89,7 @@ def topics():
             return "", 400
     return response
 
+
 @app.route("/pluginstall", methods=["GET"])
 def pluginstall():
     res = request.args.get('link')
@@ -104,6 +107,7 @@ def pluginstall():
         case 'darwin':
             return 'Mac OS systems is not supported!', 404
 
+
 @app.route("/mginstall", methods=["GET"])
 def mginstall():
     match platform:
@@ -114,6 +118,7 @@ def mginstall():
             pass
         case 'darwin':
             return 'Mac OS systems is not supported!'
+
 
 @app.route("/plugupdate", methods=["GET"])
 def plugupdate():
@@ -138,6 +143,7 @@ def logging():
         return devlogrd, 200
     except:
         return "", 200
+
 
 @app.route("/stop", methods=["GET"])
 def stop():

@@ -3,6 +3,7 @@ import Home from "../pages/Home.vue";
 import Plugins from "../pages/Plugins.vue";
 import Settings from "../pages/Settings.vue";
 import Configs from "../pages/Configs.vue";
+import Debug from "../pages/Debug.vue";
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     path: "/configs",
     name: "configs",
     component: Configs,
+  },
+  {
+    path: "/debug",
+    name: "Debug",
+    component: Debug,
   },
   {
     path: "/settings",

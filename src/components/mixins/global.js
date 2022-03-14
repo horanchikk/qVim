@@ -38,10 +38,5 @@ export const animations = {
         document.getElementById("header-container").style.filter = "blur(0px)";
       }, 600);
     },
-    async alertopen() {
-      document.getElementById("main-container").style.filter = "blur(5px)";
-      document.getElementById("header-container").style.filter = "blur(5px)";
-      document.getElementById("vim-alert-bg").style.display = "block";
-    },
   },
 };
