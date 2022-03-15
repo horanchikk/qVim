@@ -165,7 +165,6 @@ export default {
 }
 
 .shop__search {
-  position: absolute;
   margin-top: 10px;
   width: 15%;
   height: 10%;
@@ -335,6 +334,7 @@ export default {
 @media (max-width: 2000px) {
   /* desktop */
   .shop-container {
+    position: fixed;
     margin-top: 40px;
   }
 }
@@ -359,7 +359,6 @@ export default {
     width: 100%;
   }
   .shop_search {
-    position: relative;
     width: 25%;
     margin-left: 70%;
   }
@@ -376,7 +375,6 @@ export default {
     margin-top: 0px;
   }
   .shop_search {
-    position: relative;
     margin-left: 20%;
     width: 50%;
   }

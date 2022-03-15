@@ -1,25 +1,71 @@
 <template>
- <Transition name="fade">
-  <div v-if="isShowing" class="vim-alert-bg" id="vim-alert-bg">
-    <div class="vim-alert-container" id="vim-alert-container">
-      <h1 class="vim-alert-container-title">Warning!</h1>
-      <h2 class="vim-alert-container-description">
-        For the program to work correctly, you need to install vim-plug.
-        Install?
-      </h2>
-      <btn1 :title="'Yes'" @click="$emit('alertres', true)" />
-      <btn1 :title="'No'" @click="$emit('alertres', false)" />
-    </div>
-  </div>
- </Transition>
+  <Transition name="fade">
+    <main v-if="alertShowing" class="alertWindow">
+      <section class="alertwindow__cont">
+        <h2>{{ alertTitle }}</h2>
+        <h1>{{ alertDescription }}</h1>
+        <div class="alertwindow__btns">
+          <btn1 :title="'Yes'" @click="$emit('alertres', true)" />
+          <btn1 :title="'No'" @click="$emit('alertres', false)" />
+        </div>
+      </section>
+    </main>
+  </Transition>
 </template>
 
 <script>
-import btn1 from "../components/btn1.vue";
+//
+//
+//     Using component alertWindow in your project
+//
+// -- Copy it to <template> --
+//
+// <alert-window
+//     :alertShowing="alertShowing"
+//     :alertTitle="this.title"
+//     :alertDescription="this.description"
+//     @alertres="alertres"
+//   />
+//
+// -- This in <script> --
+//
+// import alertWindow from "../components/alertWindow.vue";
+//
+// export default {
+//  data() {
+//    return {
+//       alertShowing: false,
+//       title: "",
+//       description: "",
+//    };
+//  },
+//  methods: {
+//   alertres(status) {
+//     this.alertShowing = status;
+//   },
+// },
+//
+//     How to change state of showing alertWindow?
+//
+//  In component: <button @click="alertres(true|false)" />
+//
+//  In method: this.alertShowing = true|false;
+//
+//
+
+import btn1 from "./mainBtn.vue";
 export default {
   emits: ["alertres"],
   props: {
-    isShowing: Boolean,
+    alertTitle: String,
+    alertDescription: String,
+    alertShowing: Boolean,
+  },
+  data() {
+    return {
+      title: this.alertTitle,
+      description: this.alertDescription,
+    };
   },
   components: {
     btn1,
@@ -36,46 +82,48 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.vim-alert-bg {
+// Set alertWindow style
+.alertWindow {
+  position: fixed;
   width: 100%;
   height: 100%;
-  display: block;
-  position: fixed;
-  cursor: default;
-  background-color: rgb(0 0 0 / 0.7);
-  z-index: 1;
-  transition: 0.6s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.3);
 }
-.vim-alert-container {
+.alertwindow__cont {
+  // Centering block
   position: absolute;
-  width: 50%;
-  height: 30%;
+  width: 350px;
+  height: 180px;
   top: 50%;
   left: 50%;
-  display: flex;
-  flex-direction: column;
   transform: translate(-50%, -50%);
-  background-color: rgb(50 50 50 / 1);
+  // Styilng
+  padding: 10px;
+  border: 0.1rem solid yellow;
+  background-color: rgba(50, 50, 50, 0.9);
+  border-radius: 0.3rem;
   color: whitesmoke;
-  padding: 15px;
-  border-radius: 13px;
-  transition: 0.4s ease-in-out;
-  border: yellow solid 1px;
-}
-.vim-alert-container-title {
   text-align: center;
 }
-.vim-alert-container-btns {
+.alertwindow__btns {
+  position: relative;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  justify-content: space-between;
 }
-/* Vue transition */
+
+// Set component style
+.customBtn {
+  width: 40%;
+  padding: 0.35rem;
+  font-size: 1.2rem;
+}
+
+// Vue transition
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s ease-in-out;
 }
-
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;

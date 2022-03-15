@@ -12,7 +12,7 @@
 
 <script>
 import notify from "../components/notify.vue";
-import btn1 from "../components/btn1.vue";
+import btn1 from "../components/mainBtn.vue";
 
 export default {
   data() {
