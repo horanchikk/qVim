@@ -15,7 +15,6 @@
 
 <script>
 //
-//
 //     Using component alertWindow in your project
 //
 // -- Copy it to <template> --
@@ -93,7 +92,6 @@ export default {
   // Centering block
   position: absolute;
   width: 350px;
-  height: 180px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -120,12 +118,28 @@ export default {
 }
 
 // Vue transition
+
+// Enter
+.fade-enter-from {
+  transition: 0.2s ease-in-out;
+  opacity: 0;
+  .alertwindow__cont {
+    transition: 0.2s ease-in-out;
+  }
+}
+
+// Active
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-.fade-enter-from,
+
+// Leave
 .fade-leave-to {
   opacity: 0;
+  .alertwindow__cont {
+    transition: 0.2s ease-in-out;
+    transform: translate(-30%);
+  }
 }
 </style>

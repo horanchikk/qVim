@@ -50,6 +50,7 @@ export default {
 
 <style>
 .notify-container {
+  display: none;
   position: fixed;
   top: 7%;
   display: flex;
@@ -92,6 +93,7 @@ export default {
     background: rgba(0, 0, 0, 0.7);
   }
   .notify-container-message {
+    margin-left: 5px;
     white-space: nowrap;
   }
 }

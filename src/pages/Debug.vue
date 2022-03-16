@@ -7,24 +7,35 @@
   />
   <div class="debugging">
     <div class="debugging__menu">
-      <input type="text" class="debugging__input" placeholder="title" />
-      <input type="text" class="debugging__input" placeholder="description" />
-      <btn1 @click="alertres(true)" :title="'open'"></btn1>
+      <div class="menu__controls">
+        <input
+          type="text"
+          class="debugging__input"
+          placeholder="title"
+          v-model="title"
+        />
+        <input
+          type="text"
+          class="debugging__input"
+          placeholder="description"
+          v-model="description"
+        />
+        <mainBtn @click="alertres(true)" :title="'open'"></mainBtn>
+      </div>
+      <h4>alertShowing state: {{ alertShowing }}</h4>
     </div>
-    <h4 style="color: white">alertShowing state: {{ alertShowing }}</h4>
-    <h4>{{ typein }}</h4>
   </div>
 </template>
 
 <script>
 import alertWindow from "../components/alertWindow.vue";
-import Btn1 from "../components/mainBtn.vue";
+import mainBtn from "../components/mainBtn.vue";
 import { animations } from "../components/mixins/global";
 
 export default {
   components: {
     alertWindow,
-    Btn1,
+    mainBtn,
   },
   data() {
     return {
@@ -36,13 +47,7 @@ export default {
   methods: {
     alertres(status) {
       this.alertShowing = status;
-      this.typein = "error";
     },
-  },
-  created() {
-    this.title = "Warning!";
-    this.description =
-      "For fully work qVim, you should to install vim-plug. Install it?";
   },
   mixins: [animations],
 };
@@ -50,6 +55,52 @@ export default {
 
 <style lang="scss" scoped>
 .debugging {
-  padding: 30px;
+  h4 {
+    color: white;
+    text-align: center;
+  }
+  input {
+    width: 100%;
+    border: 0;
+    background: none;
+    height: 50%;
+    text-align: center;
+    font-size: 15px;
+    transition: 0.3s ease-in;
+    color: white;
+    margin-right: 10px;
+    border: 0.15rem solid rgb(170, 170, 170);
+    border-radius: 3px;
+    padding: 5px;
+    &::placeholder {
+      color: white;
+      transition: 0.3s ease-in;
+    }
+    &:focus {
+      color: black;
+      outline: 0;
+      background: rgba(195, 195, 195, 1);
+    }
+    &:focus::placeholder {
+      color: black;
+    }
+  }
+}
+
+.debugging__menu {
+  margin: 1em;
+  padding: 1em;
+  width: 40%;
+  border-radius: 5px;
+  background-color: rgba(80, 80, 80, 0.7);
+}
+.menu__controls {
+  display: flex;
+  justify-content: center;
+}
+
+.customBtn {
+  font-size: 15px;
+  padding: 5px;
 }
 </style>

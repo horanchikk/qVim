@@ -128,6 +128,9 @@ export default {
       }
       this.editor = res.editor;
     },
+    setInputValue(value) {
+      this.inputValue = value;
+    },
   },
   async mounted() {
     this.getPlugins();
@@ -142,6 +145,7 @@ export default {
 
 .shop-container {
   font-family: "Ubuntu", sans-serif;
+  width: 100%;
 }
 
 .shop_elem-wrapper {
@@ -165,15 +169,14 @@ export default {
 }
 
 .shop__search {
-  margin-top: 10px;
-  width: 15%;
+  width: 96%;
   height: 10%;
   padding: 0px 15px 15px 15px;
-  margin-left: 82%;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .shop_search_elem {
-  width: 100%;
   border: 0;
   background: #3d3d3d;
   height: 50%;
@@ -334,33 +337,34 @@ export default {
 @media (max-width: 2000px) {
   /* desktop */
   .shop-container {
-    position: fixed;
     margin-top: 40px;
   }
 }
 
 @media (max-width: 1500px) {
   .shop-container {
-    margin-top: 40px;
+    margin-top: 10px;
   }
   .shop_elem-wrapper {
     width: 70%;
   }
-  .shop_search {
-    position: relative;
-    width: 15%;
+  .shop_search_elem {
+    width: 14%;
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 1000px) {
   .shop-container {
-    margin-top: 40px;
+    margin-top: 10px;
   }
   .shop_elem-wrapper {
     width: 100%;
   }
   .shop_search {
-    width: 25%;
     margin-left: 70%;
+  }
+  .shop_search_elem {
+    width: 100%;
   }
 }
 @media (max-width: 700px) {
@@ -372,11 +376,10 @@ export default {
     padding-right: 30%;
   }
   .shop-container {
-    margin-top: 0px;
+    margin-top: 10px;
   }
   .shop_search {
     margin-left: 20%;
-    width: 50%;
   }
   .shop_info {
     padding: 0;
