@@ -30,3 +30,6 @@ python main.py
 
 ## About developing
 Our product is currently under development, so some functions may not be working. Please, wait, when product has been released. If you have any suggestions for improving the product or you have found a bug, please contact us: horandev.service@gmail.com.
+
+## Nightly updates
+It's here: https://github.com/horanDEV/qVim/tree/dev
