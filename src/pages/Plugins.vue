@@ -29,7 +29,7 @@
 
           <div
             class="shop_info_icon"
-            @click="installpkg(plugin.link, plugin.name)"
+            @click="instplugin(plugin.link, plugin.name)"
           >
             <a
               ><svg

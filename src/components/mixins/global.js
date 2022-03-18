@@ -50,7 +50,7 @@ export const utils = {
       this.currentPage += 1;
       this.loading = false;
     },
-    async installpkg(link, name) {
+    async instplugin(link, name) {
       this.notify(`Installing ${name}...`, "loop");
       const req = await fetch(
         `http://localhost:5000/pluginstall?link=${link.toString()}`
@@ -60,6 +60,18 @@ export const utils = {
         this.notify(`${name} has been installed!`, "done");
       } else {
         this.notify(`${name} is not installed!`, "error");
+      }
+    },
+    async updplugin() {
+      this.notify(`Updating plugins, please wait...`, "loop");
+      const req = await fetch(
+        `http://localhost:5000/plugupdate`
+      );
+      const res = await req.text();
+      if (res === "ok") {
+        this.notify(`Plugins has been updated!`, "done");
+      } else {
+        this.notify(`Plugins aren't updated!`, "error");
       }
     },
     async editorcheck() {

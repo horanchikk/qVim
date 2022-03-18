@@ -5,6 +5,22 @@
     :alertDescription="this.description"
     @alertres="alertres"
   />
+  <div class="states">
+    <h4>
+      alertShowing state:
+      <a style="color: rgb(200, 0, 0)" v-if="this.alertShowing === false">{{
+        alertShowing
+      }}</a
+      ><a style="color: rgb(0, 200, 0)" v-else>{{ alertShowing }}</a>
+    </h4>
+    <h4>
+      Editor:
+      <a style="color: rgb(200, 0, 0)" v-if="this.editor === 'none'">{{
+        editor
+      }}</a
+      ><a style="color: rgb(0, 200, 0)" v-else>{{ editor }}</a>
+    </h4>
+  </div>
   <div class="debugging">
     <div class="debugging__menu">
       <div class="menu__controls">
@@ -22,7 +38,22 @@
         />
         <mainBtn @click="alertres(true)" :title="'open'"></mainBtn>
       </div>
-      <h4>alertShowing state: {{ alertShowing }}</h4>
+    </div>
+  </div>
+  <div class="debugging">
+    <div class="debugging__menu">
+      <div class="menu__controls" style="justify-content: space-between">
+        <mainBtn
+          @click="editorcheck()"
+          :title="'Update state of editor'"
+          style="font-size: 15px; padding: 10px"
+        ></mainBtn>
+        <mainBtn
+          @click="updplugin()"
+          :title="'Update plugins in nvim/vim'"
+          style="font-size: 15px; padding: 10px"
+        ></mainBtn>
+      </div>
     </div>
   </div>
   <notify :type="typein" />
@@ -61,12 +92,19 @@ export default {
   },
   async mounted() {
     this.debug();
-    this.editorcheck();
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.states {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  color: white;
+  margin-left: 1rem;
+}
+
 .debugging {
   h4 {
     color: white;

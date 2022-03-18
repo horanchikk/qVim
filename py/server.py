@@ -129,10 +129,10 @@ def plugupdate():
             cmd(
                 """ "C:/Program Files/Neovim/bin/nvim.exe" --headless +PlugUpdate +qall """
             )
-            return 'ok'
+            return 'ok', 200
         case 'linux':
             cmd('nvim --headless +PlugUpdate +qall')
-            return 'ok'
+            return 'ok', 200
         case 'darwin':
             return 'Mac OS systems is not supported!', 404
 
