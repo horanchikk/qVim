@@ -25,23 +25,33 @@
       <h4>alertShowing state: {{ alertShowing }}</h4>
     </div>
   </div>
+  <notify :type="typein" />
+  <progressbar :icon="debico" />
 </template>
 
 <script>
 import alertWindow from "../components/alertWindow.vue";
 import mainBtn from "../components/mainBtn.vue";
-import { animations } from "../components/mixins/global";
+import progressbar from "../components/progressbar.vue";
+import notify from "../components/notify";
+import { utils } from "../components/mixins/global.js";
 
 export default {
   components: {
     alertWindow,
     mainBtn,
+    notify,
+    progressbar,
   },
+  mixins: [utils],
   data() {
     return {
       alertShowing: false,
       title: "",
       description: "",
+      typein: "none",
+      debico: "res",
+      editor: "none",
     };
   },
   methods: {
@@ -49,7 +59,10 @@ export default {
       this.alertShowing = status;
     },
   },
-  mixins: [animations],
+  async mounted() {
+    this.debug();
+    this.editorcheck();
+  },
 };
 </script>
 

@@ -23,7 +23,7 @@ def cmd(msg):
         result = call(msg, stdout=devlogfile, shell=True)
         match result:
             case 1:
-                devlogfile.write('Failed!')
+                devlogfile.write('Exception: command not found!')
                 return False
             case 0:
                 devlogfile.write('Waiting...')
@@ -98,9 +98,11 @@ def pluginstall():
     sleep(1)
     match platform:
         case 'win32':
-            cmd(
-                f""" "C:/Program Files/Neovim/bin/nvim.exe" --headless +"Plug '{link}'" +PlugInstall +qall """)
-            return 'ok', 200
+            if cmd(f""" "C:/Program Files/Neovim/bin/nvim.exe" --headless +"Plug '{link}'" +PlugInstall +qall """) == True:
+                return 'ok', 200
+            else:
+                return '', 404
+            
         case 'linux':
             cmd(f"""nvim --headless +"Plug '{link}'" +PlugInstall +qall""")
             return 'ok', 200

@@ -58,11 +58,13 @@
     </div>
     <progressbar :icon="debico" />
   </div>
+  <notify :type="typein" />
 </template>
 
 <script>
 import progressbar from "../components/progressbar.vue";
-import { animations } from "../components/mixins/global.js";
+import { utils } from "../components/mixins/global.js";
+import notify from "../components/notify";
 
 export default {
   data() {
@@ -74,73 +76,29 @@ export default {
       searchedPlugins: [],
       inputValue: "",
       debico: "res",
+      typein: "error",
       editor: "none",
     };
   },
   components: {
     progressbar,
+    notify,
   },
-  mixins: [animations],
+  mixins: [utils],
   methods: {
-    async debug() {
-      for (;;) {
-        let res = await fetch(`http://localhost:5000/log`);
-        let restext = await res.text();
-
-        if (restext === "Waiting...") {
-          this.debico = "wait";
-        } else {
-          this.debico = "req";
-        }
-
-        document.getElementById("progressbar-messages").innerText = restext;
-      }
-    },
-    async getPlugins() {
-      this.loading = true;
-      this.notify(`Requesting to Flask server. Please wait...`, "loop");
-      const data = await fetch(
-        `http://localhost:5000/topics?page=${this.currentPage}`
-      );
-      const plugins = await data.json();
-      plugins.forEach((plugin) => {
-        this.plugins.push(plugin);
-        this.searchedPlugins.push(plugin);
-      });
-      this.currentPage += 1;
-      this.loading = false;
-    },
-    async installpkg(link, name) {
-      this.notify(`Installing ${name}...`, "loop");
-      const req = await fetch(
-        `http://localhost:5000/pluginstall?link=${link.toString()}`
-      );
-      const res = await req.text();
-      if (res === "ok") {
-        this.notify(`${name} has been installed!`, "done");
-      }
-    },
-    async editorcheck() {
-      const req = await fetch(`http://localhost:5000/vimcheck`);
-      const res = await req.json();
-      if (res.editor === "none") {
-        return undefined;
-      }
-      this.editor = res.editor;
-    },
     setInputValue(value) {
       this.inputValue = value;
     },
   },
   async mounted() {
+    this.editorcheck();
     this.getPlugins();
     this.debug();
-    this.editorcheck();
   },
 };
 </script>
 
-<style>
+<style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 .shop-container {
@@ -164,8 +122,11 @@ export default {
   border-radius: 13px;
   color: white;
   opacity: 0;
-  transform: translateY(-100%);
   animation: load3 1s forwards;
+  transition: 0.2s ease;
+  &:hover {
+    box-shadow: 0px 0px 10px whitesmoke;
+  }
 }
 
 .shop__search {
@@ -183,27 +144,31 @@ export default {
   text-align: center;
   font-size: 23px;
   border-radius: 5px;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease;
   color: white;
-}
-
-.shop_search_elem::placeholder {
-  color: white;
-  transition: 0.3s ease-in;
+  outline: 0;
 }
 
 .shop_search_elem:focus {
-  color: black;
-  outline: 0;
-  background: rgba(195, 195, 195, 1);
+  box-shadow: 0px 0px 10px whitesmoke;
 }
 
-.shop_search_elem:focus::placeholder {
-  color: black;
-}
+// .shop_search_elem::placeholder {
+//   color: white;
+//   transition: 0.3s ease-in;
+// }
+
+// .shop_search_elem:focus {
+//   color: black;
+//   outline: 0;
+//   background: rgba(195, 195, 195, 1);
+// }
+
+// .shop_search_elem:focus::placeholder {
+//   color: black;
+// }
 
 .shop_info {
-  margin: 10px;
   padding: 10px;
 }
 .shop_info_container {

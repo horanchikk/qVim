@@ -45,23 +45,9 @@
   <section id="main-container">
     <router-view />
   </section>
-  <notify :type="typein" />
 </template>
 
-<script>
-import notify from "./components/notify";
-
-export default {
-  data() {
-    return {
-      typein: "done",
-    };
-  },
-  components: {
-    notify,
-  },
-};
-</script>
+<script />
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap");

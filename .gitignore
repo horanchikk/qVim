@@ -7,4 +7,5 @@ commit.py
 __pycache__
 old*
 package-lock.json
-*.log	
+out/config.log	
+out/server.log

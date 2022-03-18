@@ -82,7 +82,9 @@ export default {
   /* Desktop */
   .notify-container {
     padding: 6px;
-    background: rgba(100, 100, 100, 1);
+    background: rgba(58, 58, 58, 0.7);
+    top: 2%;
+    box-shadow: 0px 0px 10px whitesmoke;
   }
 }
 @media (max-width: 700px) {
