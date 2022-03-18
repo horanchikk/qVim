@@ -180,10 +180,12 @@ export default {
 .shop_info_title {
   margin-left: 5%;
   width: 65%;
+  cursor: default;
 }
 
 .shop_info_description {
   width: 100%;
+  cursor: default;
 }
 
 .shop_info_svg {
