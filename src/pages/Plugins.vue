@@ -4,7 +4,7 @@
       <input
         type="text"
         placeholder="Find plugin..."
-        class="shop_search_elem"
+        class="shop__search-input"
         :value="inputValue"
         @input="setInputValue($event.target.value)"
       />
@@ -26,7 +26,9 @@
                 {{ plugin.name }}
               </h1>
               <h4 class="shop_info_description">{{ plugin.description }}</h4>
-              <h5>https://github.com{{ plugin.link }}</h5>
+              <h5 class="shop_info_link">
+                https://github.com{{ plugin.link }}
+              </h5>
             </div>
           </div>
 
@@ -140,10 +142,9 @@ export default {
   flex-direction: row-reverse;
 }
 
-.shop_search_elem {
+.shop__search-input {
   border: 0;
   background: #3d3d3d;
-  height: 50%;
   text-align: center;
   font-size: 23px;
   border-radius: 5px;
@@ -152,22 +153,22 @@ export default {
   outline: 0;
 }
 
-.shop_search_elem:focus {
+.shop__search-input:focus {
   box-shadow: 0px 0px 10px whitesmoke;
 }
 
-// .shop_search_elem::placeholder {
+// .shop__search-input::placeholder {
 //   color: white;
 //   transition: 0.3s ease-in;
 // }
 
-// .shop_search_elem:focus {
+// .shop__search-input:focus {
 //   color: black;
 //   outline: 0;
 //   background: rgba(195, 195, 195, 1);
 // }
 
-// .shop_search_elem:focus::placeholder {
+// .shop__search-input:focus::placeholder {
 //   color: black;
 // }
 
@@ -189,6 +190,11 @@ export default {
 .shop_info_description {
   width: 100%;
   cursor: default;
+}
+
+.shop_info_link {
+  color: rgba(255, 255, 255, 0.3);
+  height: 100%;
 }
 
 .shop_info_svg {
@@ -318,7 +324,7 @@ export default {
   .shop_elem-wrapper {
     width: 70%;
   }
-  .shop_search_elem {
+  .shop__search-input {
     width: 14%;
     font-size: 1.3rem;
   }
@@ -333,7 +339,7 @@ export default {
   .shop_search {
     margin-left: 70%;
   }
-  .shop_search_elem {
+  .shop__search-input {
     width: 100%;
   }
 }
@@ -348,9 +354,6 @@ export default {
   .shop-container {
     margin-top: 10px;
   }
-  .shop_search {
-    margin-left: 20%;
-  }
   .shop_info {
     padding: 0;
   }
@@ -359,17 +362,26 @@ export default {
   }
   .shop_info_container {
     padding: 2px;
+    margin-left: 10%;
   }
   .shop_info_svg {
     margin: 0;
   }
+  .shop__search {
+    position: relative;
+    margin-left: 0%;
+    width: 96%;
+    padding: 2%;
+  }
 }
 
 @media (max-width: 500px) {
-  .shop_search {
+  .shop__search {
     position: relative;
     margin-left: 0%;
     width: 90%;
+    height: 60px;
+    padding: 5%;
   }
 }
 </style>

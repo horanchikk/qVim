@@ -20,7 +20,7 @@ def traceback(err):
 def cmd(msg):
     with open('out/config.log', 'w') as dev:
         dev.write(f'Executed {msg}')
-    sleep(2)
+    sleep(0.4)
     with open('out/config.log', 'w') as devlogfile:
         # result = call(msg, stdout=devlogfile, shell=True)
         result = call(msg, shell=True)
@@ -103,6 +103,7 @@ def pluginstall():
         case 'win32':
             with open('out/config.log', 'w') as log:
                 log.write(f'Installing {res}...')
+            sleep(1.2)
             if cmd(f""" "C:/Program Files/Neovim/bin/nvim.exe" --headless +"Plug '{link}'" +PlugInstall +qall """) == True:
                 return 'ok', 200
             else:

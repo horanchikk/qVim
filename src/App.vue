@@ -162,6 +162,14 @@ body {
   }
 }
 @media (max-width: 500px) {
+  #main-container {
+    margin-top: 20%;
+  }
+  .header-container {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }
   .header-elem {
     font-size: 25px;
     margin: 0;
@@ -179,7 +187,7 @@ body {
   }
 }
 
-.main-container {
+#main-container {
   transition: 0.6s ease-in-out;
 }
 </style>
