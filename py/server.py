@@ -152,6 +152,11 @@ def logging():
     except:
         return "", 200
 
+@app.route("/launch", methods=["GET"])
+def launch():
+    sleep(1)
+    cmd("start nvim.exe")
+    return "ok", 200
 
 @app.route("/stop", methods=["GET"])
 def stop():

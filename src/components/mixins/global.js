@@ -36,6 +36,16 @@ export const utils = {
         document.getElementById("progressbar__messages").innerText = restext;
       }
     },
+    async launch() {
+      this.notify(`Launching nvim/vim`, "loop");
+      const req = await fetch(`http://localhost:5000/launch`);
+      const res = await req.text();
+      if (res === "ok") {
+        this.notify(`Launched!`, "done");
+      } else {
+        this.notify(`Exception!`, "error");
+      }
+    },
     async getPlugins() {
       this.loading = true;
       this.notify(`Requesting to Flask server. Please wait...`, "loop");

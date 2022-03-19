@@ -46,12 +46,17 @@
         <mainBtn
           @click="editorcheck()"
           :title="'Update state of editor'"
-          style="font-size: 15px; padding: 10px"
+          style="font-size: 15px; padding: 10px; margin: 10px"
         ></mainBtn>
         <mainBtn
           @click="updplugin()"
           :title="'Update plugins in nvim/vim'"
-          style="font-size: 15px; padding: 10px"
+          style="font-size: 15px; padding: 10px; margin: 10px"
+        ></mainBtn>
+        <mainBtn
+          @click="launch()"
+          :title="'Launch nvim/vim'"
+          style="font-size: 15px; padding: 10px; margin: 10px"
         ></mainBtn>
       </div>
     </div>
