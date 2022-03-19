@@ -64,9 +64,7 @@ export const utils = {
     },
     async updplugin() {
       this.notify(`Updating plugins, please wait...`, "loop");
-      const req = await fetch(
-        `http://localhost:5000/plugupdate`
-      );
+      const req = await fetch(`http://localhost:5000/plugupdate`);
       const res = await req.text();
       if (res === "ok") {
         this.notify(`Plugins has been updated!`, "done");

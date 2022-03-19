@@ -1,6 +1,12 @@
 <template>
   <Transition name="fade">
-    <div class="progressbar__waiting" v-if="icon === 'wait'"></div>
+    <div class="progressbar__waiting" v-if="icon === 'wait'">
+      <div class="progressbar__messages">
+        <h2 id="progressbar__messages" style="display: none">
+          Sending request to Flask...
+        </h2>
+      </div>
+    </div>
     <div class="progressbar" v-else>
       <div class="progressbar__icon">
         <svg
@@ -65,7 +71,6 @@
       <div class="progressbar__messages">
         <h2 id="progressbar__messages">Sending request to Flask...</h2>
       </div>
-      <div class="progressbar__line"></div>
     </div>
   </Transition>
 </template>

@@ -13,14 +13,17 @@ app.config['Access-Control-Allow-Origin'] = '*'
 with open('out/config.log', 'w') as devlogfile:
     devlogfile.write('Waiting...')
 
-
 def traceback(err):
     return '[{"name": "Traceback", "descs": "' + str(err) + '"}]'
 
 
 def cmd(msg):
+    with open('out/config.log', 'w') as dev:
+        dev.write(f'Executed {msg}')
+    sleep(2)
     with open('out/config.log', 'w') as devlogfile:
-        result = call(msg, stdout=devlogfile, shell=True)
+        # result = call(msg, stdout=devlogfile, shell=True)
+        result = call(msg, shell=True)
         match result:
             case 1:
                 devlogfile.write('Exception: command not found!')
@@ -98,6 +101,8 @@ def pluginstall():
     sleep(1)
     match platform:
         case 'win32':
+            with open('out/config.log', 'w') as log:
+                log.write(f'Installing {res}...')
             if cmd(f""" "C:/Program Files/Neovim/bin/nvim.exe" --headless +"Plug '{link}'" +PlugInstall +qall """) == True:
                 return 'ok', 200
             else:

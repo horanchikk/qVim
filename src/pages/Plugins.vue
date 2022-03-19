@@ -22,8 +22,11 @@
         >
           <div class="shop_info">
             <div class="shop_info_container">
-              <h1 class="shop_info_title">{{ plugin.name }}</h1>
+              <h1 class="shop_info_title">
+                {{ plugin.name }}
+              </h1>
               <h4 class="shop_info_description">{{ plugin.description }}</h4>
+              <h5>https://github.com{{ plugin.link }}</h5>
             </div>
           </div>
 

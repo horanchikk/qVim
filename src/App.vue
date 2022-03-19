@@ -65,7 +65,6 @@ body {
 
 .header-container {
   width: 100%;
-  height: 20%;
   padding: 5px 0;
   margin: 0 auto;
   background-color: #242424;
