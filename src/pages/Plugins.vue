@@ -1,4 +1,10 @@
 <template>
+  <alert-window
+    :alertShowing="alertShowing"
+    :alertTitle="this.title"
+    :alertDescription="this.description"
+    @alertres="alertres"
+  />
   <div class="shop-container">
     <div class="shop__search">
       <input
@@ -31,7 +37,6 @@
               </h5>
             </div>
           </div>
-
           <div
             class="shop_info_icon"
             @click="instplugin(plugin.link, plugin.name)"
@@ -70,6 +75,7 @@
 import progressbar from "../components/progressbar.vue";
 import { utils } from "../components/mixins/global.js";
 import notify from "../components/notify";
+import alertWindow from "../components/alertWindow.vue";
 
 export default {
   data() {
@@ -83,16 +89,23 @@ export default {
       debico: "res",
       typein: "error",
       editor: "none",
+      alertShowing: false,
+      title: "",
+      description: "",
     };
   },
   components: {
     progressbar,
     notify,
+    alertWindow,
   },
   mixins: [utils],
   methods: {
     setInputValue(value) {
       this.inputValue = value;
+    },
+    alertres(status) {
+      this.alertShowing = status;
     },
   },
   async mounted() {

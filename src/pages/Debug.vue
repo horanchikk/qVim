@@ -36,28 +36,33 @@
           placeholder="description"
           v-model="description"
         />
-        <mainBtn @click="alertres(true)" :title="'open'"></mainBtn>
+        <mainBtn @click="alertres(true)" :title="'open'" />
       </div>
     </div>
   </div>
   <div class="debugging">
     <div class="debugging__menu">
-      <div class="menu__controls" style="justify-content: space-between">
+      <div class="menu__controls-btns">
         <mainBtn
           @click="editorcheck()"
           :title="'Update state of editor'"
-          style="font-size: 15px; padding: 10px; margin: 10px"
-        ></mainBtn>
+          style="font-size: 15px; padding: 10px"
+        />
         <mainBtn
           @click="updplugin()"
           :title="'Update plugins in nvim/vim'"
-          style="font-size: 15px; padding: 10px; margin: 10px"
-        ></mainBtn>
+          style="font-size: 15px; padding: 10px"
+        />
         <mainBtn
           @click="launch()"
           :title="'Launch nvim/vim'"
-          style="font-size: 15px; padding: 10px; margin: 10px"
-        ></mainBtn>
+          style="font-size: 15px; padding: 10px"
+        />
+        <mainBtn
+          @click="updatevim()"
+          :title="'Update nvim/vim'"
+          style="font-size: 15px; padding: 10px"
+        />
       </div>
     </div>
   </div>
@@ -153,6 +158,13 @@ export default {
 .menu__controls {
   display: flex;
   justify-content: center;
+}
+
+.menu__controls-btns {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  column-gap: 20%;
+  row-gap: 20px;
 }
 
 .customBtn {

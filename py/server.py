@@ -14,7 +14,9 @@ with open('out/config.log', 'w') as devlogfile:
     devlogfile.write('Waiting...')
 
 def traceback(err):
-    return '[{"name": "Traceback", "descs": "' + str(err) + '"}]'
+    sleep(5)
+    with open('out/config.log', 'w') as dev:
+        dev.write(err)
 
 
 def cmd(msg):
@@ -123,7 +125,8 @@ def mginstall():
             cmd('powershell ./scripts/install.ps1')
             return 'ok', 200
         case 'linux':
-            pass
+            cmd('apt install neovim')
+            return 'ok', 200
         case 'darwin':
             return 'Mac OS systems is not supported!'
 
@@ -157,6 +160,20 @@ def launch():
     sleep(1)
     cmd("start nvim.exe")
     return "ok", 200
+
+@app.route("/upgradevim", methods=["GET"])
+def upgradevim():
+    match platform:
+        case 'win32':
+            cmd(
+                """ "C:/Program Files/Neovim/bin/nvim.exe" --headless +PlugUpgrade +qall """
+            )
+            return 'ok', 200
+        case 'linux':
+            cmd('nvim --headless +PlugUpgrade +qall')
+            return 'ok', 200
+        case 'darwin':
+            return 'Mac OS systems is not supported!', 404
 
 @app.route("/stop", methods=["GET"])
 def stop():

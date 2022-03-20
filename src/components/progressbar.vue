@@ -2,9 +2,7 @@
   <Transition name="fade">
     <div class="progressbar__waiting" v-if="icon === 'wait'">
       <div class="progressbar__messages">
-        <h2 id="progressbar__messages" style="display: none">
-          Sending request to Flask...
-        </h2>
+        <h2 id="progressbar__messages" style="display: none"></h2>
       </div>
     </div>
     <div class="progressbar" v-else>

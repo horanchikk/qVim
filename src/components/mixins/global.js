@@ -29,6 +29,8 @@ export const utils = {
           this.debico = "wait";
         } else if (restext === "Exception: command not found!") {
           this.debico = "err";
+        } else if (restext === "Check your internet connection!") {
+          this.debico = "err";
         } else {
           this.debico = "req";
         }
@@ -89,6 +91,16 @@ export const utils = {
         return undefined;
       }
       this.editor = res.editor;
+    },
+    async updatevim() {
+      this.notify(`Updating nvim/vim, please wait...`, "loop");
+      const req = await fetch(`http://localhost:5000/upgradevim`);
+      const res = await req.text();
+      if (res === "ok") {
+        this.notify(`Nvim/vim has been updated!`, "done");
+      } else {
+        this.notify(`Nvim/vim hasn't been updated.`, "error");
+      }
     },
   },
 };
