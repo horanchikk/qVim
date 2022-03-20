@@ -8,11 +8,14 @@
     </div>
   </div>
   <notify :type="typein" />
+  <progressbar :icon="debico" />
 </template>
 
 <script>
 import notify from "../components/notify.vue";
-import btn1 from "../components/btn1.vue";
+import btn1 from "../components/mainBtn.vue";
+import progressbar from "../components/progressbar.vue";
+import { utils } from "../components/mixins/global.js";
 
 export default {
   data() {
@@ -21,33 +24,6 @@ export default {
     };
   },
   methods: {
-    async notify(message, icon) {
-      if (icon == "done") {
-        this.typein = "done";
-      } else if (icon == "error") {
-        this.typein = "error";
-      } else if (icon == "loop") {
-        this.typein = "loop";
-      } else if (icon == "wifinot") {
-        this.typein = "wifinot";
-      }
-
-      document.getElementById("notify-container-message").innerText = message;
-      let elem = document.getElementById("notify-container").style;
-      elem.display = "flex";
-
-      setTimeout(() => {
-        elem.opacity = "1";
-        elem.transform = "translateX(0%)";
-      }, 100);
-      setTimeout(() => {
-        elem.opacity = "0";
-        elem.transform = "translateX(-20%)";
-      }, 2000);
-      setTimeout(() => {
-        elem.display = "none";
-      }, 2400);
-    },
     async uploadConfig() {
       let config = document.getElementById("config").value;
       this.notify(config, "done");
@@ -56,7 +32,9 @@ export default {
   components: {
     notify,
     btn1,
+    progressbar,
   },
+  mixins: [utils],
 };
 </script>
 

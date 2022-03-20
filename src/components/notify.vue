@@ -50,6 +50,7 @@ export default {
 
 <style>
 .notify-container {
+  display: none;
   position: fixed;
   top: 7%;
   display: flex;
@@ -81,7 +82,9 @@ export default {
   /* Desktop */
   .notify-container {
     padding: 6px;
-    background: rgba(61, 61, 61, 0.5);
+    background: rgba(58, 58, 58, 0.7);
+    top: 2%;
+    box-shadow: 0px 0px 10px whitesmoke;
   }
 }
 @media (max-width: 700px) {
@@ -92,6 +95,7 @@ export default {
     background: rgba(0, 0, 0, 0.7);
   }
   .notify-container-message {
+    margin-left: 5px;
     white-space: nowrap;
   }
 }

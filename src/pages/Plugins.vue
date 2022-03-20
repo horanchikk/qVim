@@ -1,10 +1,16 @@
 <template>
+  <alert-window
+    :alertShowing="alertShowing"
+    :alertTitle="this.title"
+    :alertDescription="this.description"
+    @alertres="alertres"
+  />
   <div class="shop-container">
-    <div class="shop_search">
+    <div class="shop__search">
       <input
         type="text"
         placeholder="Find plugin..."
-        class="shop_search_elem"
+        class="shop__search-input"
         :value="inputValue"
         @input="setInputValue($event.target.value)"
       />
@@ -22,14 +28,18 @@
         >
           <div class="shop_info">
             <div class="shop_info_container">
-              <h1 class="shop_info_title">{{ plugin.name }}</h1>
+              <h1 class="shop_info_title">
+                {{ plugin.name }}
+              </h1>
               <h4 class="shop_info_description">{{ plugin.description }}</h4>
+              <h5 class="shop_info_link">
+                https://github.com{{ plugin.link }}
+              </h5>
             </div>
           </div>
-
           <div
             class="shop_info_icon"
-            @click="installpkg(plugin.link, plugin.name)"
+            @click="instplugin(plugin.link, plugin.name)"
           >
             <a
               ><svg
@@ -58,10 +68,14 @@
     </div>
     <progressbar :icon="debico" />
   </div>
+  <notify :type="typein" />
 </template>
 
 <script>
 import progressbar from "../components/progressbar.vue";
+import { utils } from "../components/mixins/global.js";
+import notify from "../components/notify";
+import alertWindow from "../components/alertWindow.vue";
 
 export default {
   data() {
@@ -73,93 +87,41 @@ export default {
       searchedPlugins: [],
       inputValue: "",
       debico: "res",
+      typein: "error",
+      editor: "none",
+      alertShowing: false,
+      title: "",
+      description: "",
     };
-  },
-  methods: {
-    async debug() {
-      for (;;) {
-        let res = await fetch(`http://localhost:5000/log`);
-        let restext = await res.text();
-
-        if (restext === "Waiting...") {
-          this.debico = "wait";
-        } else {
-          this.debico = "req";
-        }
-
-        document.getElementById("progressbar-messages").innerText = restext;
-      }
-    },
-    async getPlugins() {
-      this.loading = true;
-      this.notify(`Requesting to Flask server. Please wait...`, "loop");
-      const data = await fetch(
-        `http://localhost:5000/topics?page=${this.currentPage}`
-      );
-      const plugins = await data.json();
-      plugins.forEach((plugin) => {
-        this.plugins.push(plugin);
-        this.searchedPlugins.push(plugin);
-      });
-      this.currentPage += 1;
-      this.loading = false;
-    },
-    async installpkg(link, name) {
-      this.notify(`Installing ${name}...`, "loop");
-      const req = await fetch(
-        `http://localhost:5000/pluginstall?link=${link.toString()}`
-      );
-      const ans = await req.text();
-      if (ans === "ok") {
-        this.notify(`${name} has been installed!`, "done");
-      }
-    },
-    async notify(message, icon) {
-      if (icon == "done") {
-        this.typein = "done";
-      } else if (icon == "error") {
-        this.typein = "error";
-      } else if (icon == "loop") {
-        this.typein = "loop";
-      } else if (icon == "wifinot") {
-        this.typein = "wifinot";
-      }
-
-      document.getElementById("notify-container-message").innerText = message;
-      let elem = document.getElementById("notify-container").style;
-      elem.display = "flex";
-
-      setTimeout(() => {
-        elem.opacity = "1";
-        elem.transform = "translateX(0%)";
-      }, 100);
-      setTimeout(() => {
-        elem.opacity = "0";
-        elem.transform = "translateX(-20%)";
-      }, 2000);
-      setTimeout(() => {
-        elem.display = "none";
-      }, 2400);
-    },
-    setInputValue(value) {
-      this.inputValue = value;
-    },
-  },
-  async mounted() {
-    this.getPlugins();
-    this.debug();
   },
   components: {
     progressbar,
+    notify,
+    alertWindow,
+  },
+  mixins: [utils],
+  methods: {
+    setInputValue(value) {
+      this.inputValue = value;
+    },
+    alertres(status) {
+      this.alertShowing = status;
+    },
+  },
+  async mounted() {
+    this.editorcheck();
+    this.getPlugins();
+    this.debug();
   },
 };
 </script>
 
-<style>
+<style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 .shop-container {
   font-family: "Ubuntu", sans-serif;
+  width: 100%;
 }
 
 .shop_elem-wrapper {
@@ -178,48 +140,52 @@ export default {
   border-radius: 13px;
   color: white;
   opacity: 0;
-  transform: translateY(-100%);
   animation: load3 1s forwards;
+  transition: 0.2s ease;
+  &:hover {
+    box-shadow: 0px 0px 10px whitesmoke;
+  }
 }
 
-.shop_search {
-  position: absolute;
-  margin-top: 10px;
-  width: 15%;
+.shop__search {
+  width: 96%;
   height: 10%;
   padding: 0px 15px 15px 15px;
-  margin-left: 82%;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.shop_search_elem {
-  width: 100%;
+.shop__search-input {
   border: 0;
   background: #3d3d3d;
-  height: 50%;
   text-align: center;
   font-size: 23px;
   border-radius: 5px;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease;
   color: white;
-}
-
-.shop_search_elem::placeholder {
-  color: white;
-  transition: 0.3s ease-in;
-}
-
-.shop_search_elem:focus {
-  color: black;
   outline: 0;
-  background: rgba(195, 195, 195, 1);
 }
 
-.shop_search_elem:focus::placeholder {
-  color: black;
+.shop__search-input:focus {
+  box-shadow: 0px 0px 10px whitesmoke;
 }
+
+// .shop__search-input::placeholder {
+//   color: white;
+//   transition: 0.3s ease-in;
+// }
+
+// .shop__search-input:focus {
+//   color: black;
+//   outline: 0;
+//   background: rgba(195, 195, 195, 1);
+// }
+
+// .shop__search-input:focus::placeholder {
+//   color: black;
+// }
 
 .shop_info {
-  margin: 10px;
   padding: 10px;
 }
 .shop_info_container {
@@ -231,10 +197,17 @@ export default {
 .shop_info_title {
   margin-left: 5%;
   width: 65%;
+  cursor: default;
 }
 
 .shop_info_description {
   width: 100%;
+  cursor: default;
+}
+
+.shop_info_link {
+  color: rgba(255, 255, 255, 0.3);
+  height: 100%;
 }
 
 .shop_info_svg {
@@ -359,27 +332,28 @@ export default {
 
 @media (max-width: 1500px) {
   .shop-container {
-    margin-top: 40px;
+    margin-top: 10px;
   }
   .shop_elem-wrapper {
     width: 70%;
   }
-  .shop_search {
-    position: relative;
-    width: 15%;
+  .shop__search-input {
+    width: 14%;
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 1000px) {
   .shop-container {
-    margin-top: 40px;
+    margin-top: 10px;
   }
   .shop_elem-wrapper {
     width: 100%;
   }
   .shop_search {
-    position: relative;
-    width: 25%;
     margin-left: 70%;
+  }
+  .shop__search-input {
+    width: 100%;
   }
 }
 @media (max-width: 700px) {
@@ -391,12 +365,7 @@ export default {
     padding-right: 30%;
   }
   .shop-container {
-    margin-top: 0px;
-  }
-  .shop_search {
-    position: relative;
-    margin-left: 20%;
-    width: 50%;
+    margin-top: 10px;
   }
   .shop_info {
     padding: 0;
@@ -406,17 +375,26 @@ export default {
   }
   .shop_info_container {
     padding: 2px;
+    margin-left: 10%;
   }
   .shop_info_svg {
     margin: 0;
   }
+  .shop__search {
+    position: relative;
+    margin-left: 0%;
+    width: 96%;
+    padding: 2%;
+  }
 }
 
 @media (max-width: 500px) {
-  .shop_search {
+  .shop__search {
     position: relative;
     margin-left: 0%;
     width: 90%;
+    height: 60px;
+    padding: 5%;
   }
 }
 </style>
