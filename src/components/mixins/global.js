@@ -1,4 +1,14 @@
 export const utils = {
+  data() {
+    return {
+      debico: "res",
+      typein: "error",
+      editor: "none",
+      alertShowing: false,
+      title: "",
+      description: "",
+    };
+  },
   methods: {
     async notify(message, icon) {
       // Icons: done error loop wifinot
@@ -31,6 +41,8 @@ export const utils = {
           this.debico = "err";
         } else if (restext === "Check your internet connection!") {
           this.debico = "err";
+          this.internet = false;
+          this.loading = false;
         } else {
           this.debico = "req";
         }
@@ -102,5 +114,12 @@ export const utils = {
         this.notify(`Nvim/vim hasn't been updated.`, "error");
       }
     },
+    async reloadapp() {
+      window.history.go();
+    },
+  },
+  async mounted() {
+    this.editorcheck();
+    this.debug();
   },
 };

@@ -67,7 +67,7 @@
         </svg>
       </div>
       <div class="progressbar__messages">
-        <h2 id="progressbar__messages">Sending request to Flask...</h2>
+        <h2 id="progressbar__messages">Please wait...</h2>
       </div>
     </div>
   </Transition>
@@ -105,7 +105,7 @@ export default {
 .fade-enter-active,
 .fade-leave-active {
   transform: translateY(0%);
-  transition: 0.5s ease;
+  transition: 0.4s ease;
 }
 
 .fade-enter-from,
@@ -134,7 +134,7 @@ export default {
   justify-content: center;
   svg {
     animation-name: loading;
-    animation-duration: 1.5s;
+    animation-duration: 0.8s;
     animation-iteration-count: infinite;
   }
 }

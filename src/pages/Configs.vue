@@ -7,7 +7,7 @@
 <script>
 import progressbar from "../components/progressbar.vue";
 import { utils } from "../components/mixins/global.js";
-import notify from "../components/notify";
+import notify from "../components/notify.vue";
 
 export default {
   data() {

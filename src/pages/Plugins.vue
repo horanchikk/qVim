@@ -39,6 +39,7 @@
           </div>
           <div
             class="shop_info_icon"
+            v-if="this.debico === 'wait'"
             @click="instplugin(plugin.link, plugin.name)"
           >
             <a
@@ -59,11 +60,18 @@
     <div class="j-center">
       <img src="../../public/loading.svg" class="shop_loader" v-if="loading" />
       <button
-        v-else-if="!loading && currentPage <= pageLimit"
+        v-else-if="!loading && currentPage <= pageLimit && internet === true"
         @click="getPlugins"
         class="shop_load-new-data"
       >
         Load more
+      </button>
+      <button
+        v-else-if="!loading && currentPage <= pageLimit && internet === false"
+        @click="reloadapp()"
+        class="shop_load-new-data"
+      >
+        Reload application
       </button>
     </div>
     <progressbar :icon="debico" />
@@ -74,7 +82,7 @@
 <script>
 import progressbar from "../components/progressbar.vue";
 import { utils } from "../components/mixins/global.js";
-import notify from "../components/notify";
+import notify from "../components/notify.vue";
 import alertWindow from "../components/alertWindow.vue";
 
 export default {
@@ -86,12 +94,7 @@ export default {
       pageLimit: 16,
       searchedPlugins: [],
       inputValue: "",
-      debico: "res",
-      typein: "error",
-      editor: "none",
-      alertShowing: false,
-      title: "",
-      description: "",
+      internet: true,
     };
   },
   components: {
@@ -109,9 +112,7 @@ export default {
     },
   },
   async mounted() {
-    this.editorcheck();
     this.getPlugins();
-    this.debug();
   },
 };
 </script>

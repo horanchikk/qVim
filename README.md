@@ -16,7 +16,13 @@ qVim - it is vim plugin manager with graphic interface. Here you can find some p
 - Python 3.10 or later
 - Node.JS 16.14.X
 
-## First launch
+# First launch
+
+## Windows users
+
+Make sure that nvim or vim added in PATH or installed in C:/Program Files
+
+---
 
 Install all dependencies:
 
