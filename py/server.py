@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup as bs
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from requests import get
+import json
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -40,6 +41,13 @@ def cmd(msg):
 def mainpage():
     return "", 200
 
+
+@app.route("/config/set", methods=["GET"])
+def configSet():
+    PATH = request.args.get('path')
+    with open("out/config.json") as file:
+        config = json.load(file)
+        return jsonify(config), 200
 
 @app.route("/vimcheck", methods=["GET"])
 def vimcheck():
@@ -117,6 +125,12 @@ def mginstall():
         file.write(res.content)
     return 'ok', 200
 
+@app.route("/config/get", methods=["GET"])
+def config():
+    with open('out/config.json') as file:
+        pass
+    return 'ok'
+
 @app.route("/plugupdate", methods=["GET"])
 def plugupdate():
     cmd('nvim --headless +PlugUpdate +qall')
@@ -149,7 +163,6 @@ def upgradevim():
 def stop():
     exit(0)
     return 0
-
 
 if __name__ == "__main__":
     app.run(debug=False, port=5000)
