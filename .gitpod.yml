@@ -1,7 +1,6 @@
 tasks:
   - name: 'qVim: Installing dependencies and running server to GitPod'
-    init: pyenv install 3.10.4 && pyenv shell 3.10.4 && pip3 install -r requirements.txt && npm install
-    command: python3 main.py
+    command: pyenv install 3.10.4 && pyenv shell 3.10.4 && pip3 install -r requirements.txt && npm install && python3 main.py
 
 ports:
   - port: 3000
