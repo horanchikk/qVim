@@ -1,13 +1,7 @@
 tasks:
-  - name: Installing python 3.10
-    command: pyenv install 3.10.4
-  - name: Installing npm packages
-    command: npm install
-  - name: Installing python packages
-    command: pip3.10 install -r requirements.txt
-  - name: Building
-    command: npm run build
-  - name: Running server
+  - name: Launching project
+    before: pyenv install 3.10.4
+    init: pip3.10 install -r requirements.txt && npm install && npm run build
     command: python3.10 main.py
 
 ports:
