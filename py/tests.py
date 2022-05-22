@@ -32,14 +32,14 @@ def pkgs():
 
 def serverstats():
     try:
-        serverreq = get('http://localhost:5000').status_code
+        serverreq = get('http://localhost:5005').status_code
     except:
         serverreq = "404"
 
     if serverreq != 200:
         sleep(5)
         try:
-            serverreq = get('http://127.0.0.1:5000').status_code
+            serverreq = get('http://127.0.0.1:5005').status_code
         except:
             serverreq = "404"
         if serverreq != 200:

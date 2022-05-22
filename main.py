@@ -31,7 +31,7 @@ def initThread(typeserver):
                 pass
 
         case "npm":
-            call("yarn serve", shell=True)
+            call("yarn dev", shell=True)
             while True:
                 pass
 
@@ -57,8 +57,7 @@ def server(args):
             g.start()
             j.start()
             serverstats()
-            sleep(2)
-            open_new_tab('http://localhost:8080')
+            open_new_tab('http://localhost:3000')
             while True:
                 sleep(10000)
 

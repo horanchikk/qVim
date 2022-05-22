@@ -1,14 +1,8 @@
 <template>
-  <div class="settings__main">
-    <div class="settings__container"></div>
-    <div class="settings__container" style="background-color: rgba(0, 0, 0, 0)">
-      <h2>Config</h2>
-      <textarea name="config" id="config" cols="30" rows="10"></textarea>
-      <btn1 :title="'Save & Update'" @click="uploadConfig()" />
-    </div>
-  </div>
+  <div class="settings__container"></div>
   <notify :type="typein" />
   <progressbar :icon="debico" />
+  <btn1 />
 </template>
 
 <script>
@@ -21,13 +15,9 @@ export default {
   data() {
     return {
       typein: "done",
+      debico: "res",
+      editor: "none",
     };
-  },
-  methods: {
-    async uploadConfig() {
-      let config = document.getElementById("config").value;
-      this.notify(config, "done");
-    },
   },
   components: {
     notify,
@@ -38,68 +28,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-body {
-  margin: 0;
-  font-family: "Ubuntu", sans-serif;
-  background-color: #131313;
-}
-
-.settings__main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.settings__container {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px 10px;
-  background-color: #3d3d3d;
-  border-radius: 13px;
-  color: white;
-  opacity: 0;
-  padding: 10px;
-  transform: translateY(-100%);
-  animation: load3 0.4s forwards;
-  text-align: center;
-}
-
-textarea {
-  resize: none;
-  height: 100%;
-  width: 100%;
-  border: 0;
-  outline: none;
-  background-color: #3d3d3d;
-  color: whitesmoke;
-  border-radius: 3px;
-  padding: 10px;
-  font-family: sans-serif;
-  transition: 0.3s ease-in-out;
-
-  &:focus {
-    outline: 1px solid rgb(200, 200, 0);
-  }
-}
-
-.settings__btn {
-  cursor: pointer;
-  width: 80%;
-  padding: 5px;
-  background: transparent;
-  border: 3px solid #b6b6b6;
-  color: #b6b6b6;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  transition: 0.1s ease-in;
-}
-
-.settings__btn:hover {
-  border: 3px solid #dddddd;
-  color: #dddddd;
-}
-</style>
+<style lang="scss" scoped></style>

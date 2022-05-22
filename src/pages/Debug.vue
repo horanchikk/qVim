@@ -74,7 +74,7 @@
 import alertWindow from "../components/alertWindow.vue";
 import mainBtn from "../components/mainBtn.vue";
 import progressbar from "../components/progressbar.vue";
-import notify from "../components/notify";
+import notify from "../components/notify.vue";
 import { utils } from "../components/mixins/global.js";
 
 export default {

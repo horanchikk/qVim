@@ -16,7 +16,30 @@ qVim - it is vim plugin manager with graphic interface. Here you can find some p
 - Python 3.10 or later
 - Node.JS 16.14.X
 
-## First launch
+# First launch
+
+## Linux users
+
+Auto install:
+
+```sh
+sudo apt-get update && curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt-get install nodejs software-properties-common -y && sudo add-apt-repository ppa:deadsnakes/ppa -y && sudo apt install python3.10 python3.10-distutils -y && pip3.10 install -r requirements.txt && sudo npm install --global yarn && yarn && python3.10 main.py
+```
+
+If you use WSL, add this in /etc/wsl.conf:
+
+```conf
+[interop]
+appendWindowsPath = false
+```
+
+then execute shell command again.
+
+## Windows users
+
+Please make sure that nVim or Vim added in PATH
+
+---
 
 Install all dependencies:
 

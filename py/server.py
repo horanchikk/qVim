@@ -1,10 +1,12 @@
 import requests
-from subprocess import call
+from subprocess import call, check_output
 from sys import exit, platform
 from time import sleep
 from bs4 import BeautifulSoup as bs
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from requests import get
+import json
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -28,7 +30,7 @@ def cmd(msg):
         result = call(msg, shell=True)
         match result:
             case 1:
-                devlogfile.write('Exception: command not found!')
+                devlogfile.write('Exception: command not found! Install Neovim and try again!')
                 return False
             case 0:
                 devlogfile.write('Waiting...')
@@ -39,6 +41,13 @@ def cmd(msg):
 def mainpage():
     return "", 200
 
+
+@app.route("/config/set", methods=["GET"])
+def configSet():
+    PATH = request.args.get('path')
+    with open("out/config.json") as file:
+        config = json.load(file)
+        return jsonify(config), 200
 
 @app.route("/vimcheck", methods=["GET"])
 def vimcheck():
@@ -82,8 +91,7 @@ def topics():
             descreq = descs[i].text
             fixdesc = descreq.replace("\n", "")
             link = str(links[i]['href'])
-            texts.append(
-                {'name': fixname, 'description': fixdesc, 'link': link})
+            texts.append({'name': fixname, 'description': fixdesc, 'link': link})
     except Exception as e:
         print(app.logger.warn(e))
 
@@ -101,49 +109,31 @@ def pluginstall():
     link = res[1:]
     print(f'\n{link}')
     sleep(1)
-    match platform:
-        case 'win32':
-            with open('out/config.log', 'w') as log:
-                log.write(f'Installing {res}...')
-            sleep(1.2)
-            if cmd(f""" "C:/Program Files/Neovim/bin/nvim.exe" --headless +"Plug '{link}'" +PlugInstall +qall """) == True:
-                return 'ok', 200
-            else:
-                return '', 404
-            
-        case 'linux':
-            cmd(f"""nvim --headless +"Plug '{link}'" +PlugInstall +qall""")
-            return 'ok', 200
-        case 'darwin':
-            return 'Mac OS systems is not supported!', 404
+    with open('out/config.log', 'w') as log:
+        log.write(f'Installing {res}...')
+    sleep(2)
+    cmd(f"""nvim --headless +"Plug '{link}'" +PlugInstall +qall""")
+    return 'ok', 200
 
 
 @app.route("/mginstall", methods=["GET"])
 def mginstall():
-    match platform:
-        case 'win32':
-            cmd('powershell ./scripts/install.ps1')
-            return 'ok', 200
-        case 'linux':
-            cmd('apt install neovim')
-            return 'ok', 200
-        case 'darwin':
-            return 'Mac OS systems is not supported!'
+    PATH = check_output("""nvim --headless +"echo stdpath('config')" +qall""", shell=True).decode("utf-8")
+    with open(PATH, "wb") as file:
+        res = get("https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim")
+        file.write(res.content)
+    return 'ok', 200
 
+@app.route("/config/get", methods=["GET"])
+def config():
+    with open('out/config.json') as file:
+        pass
+    return 'ok'
 
 @app.route("/plugupdate", methods=["GET"])
 def plugupdate():
-    match platform:
-        case 'win32':
-            cmd(
-                """ "C:/Program Files/Neovim/bin/nvim.exe" --headless +PlugUpdate +qall """
-            )
-            return 'ok', 200
-        case 'linux':
-            cmd('nvim --headless +PlugUpdate +qall')
-            return 'ok', 200
-        case 'darwin':
-            return 'Mac OS systems is not supported!', 404
+    cmd('nvim --headless +PlugUpdate +qall')
+    return 'ok', 200
 
 
 @app.route("/log", methods=["GET"])
@@ -158,28 +148,20 @@ def logging():
 @app.route("/launch", methods=["GET"])
 def launch():
     sleep(1)
-    cmd("start nvim.exe")
+    match platform: 
+        case 'win32':
+            cmd("start nvim")
     return "ok", 200
 
 @app.route("/upgradevim", methods=["GET"])
 def upgradevim():
-    match platform:
-        case 'win32':
-            cmd(
-                """ "C:/Program Files/Neovim/bin/nvim.exe" --headless +PlugUpgrade +qall """
-            )
-            return 'ok', 200
-        case 'linux':
-            cmd('nvim --headless +PlugUpgrade +qall')
-            return 'ok', 200
-        case 'darwin':
-            return 'Mac OS systems is not supported!', 404
+    cmd('nvim --headless +PlugUpgrade +qall')
+    return 'ok', 200
 
 @app.route("/stop", methods=["GET"])
 def stop():
     exit(0)
     return 0
 
-
 if __name__ == "__main__":
-    app.run(debug=False, port=5000)
+    app.run(debug=False, port=5005)
