@@ -1,4 +1,4 @@
-const SERVER_URL = "http://localhost:5005";
+const SERVER_URL = "http://0.0.0.0:5005";
 
 export const utils = {
   data() {

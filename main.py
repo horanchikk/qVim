@@ -57,7 +57,7 @@ def server(args):
             g.start()
             j.start()
             serverstats()
-            open_new_tab('http://localhost:3000')
+            open_new_tab('https://0.0.0.0:3000')
             while True:
                 sleep(10000)
 
