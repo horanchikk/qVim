@@ -1,11 +1,12 @@
 tasks:
-  - name: Launching project
-    before: pyenv install 3.10.4
-    init: pip3.10 install -r requirements.txt && npm install && npm run build
-    command: python3.10 main.py
+  - name: 'qVim: Installing dependencies to GitPod'
+    before: pyenv install 3.10.4 && pyenv shell 3.10.4
+    init: pip3 install -r requirements.txt && npm install && npm run build
+    command: python3 main.py
 
 ports:
   - port: 3000
     visibility: private
+    onOpen: open-browser
   - port: 5005
     visibility: private
