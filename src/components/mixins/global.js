@@ -1,3 +1,5 @@
+const SERVER_URL = "http://localhost:5005";
+
 export const utils = {
   data() {
     return {
@@ -32,12 +34,15 @@ export const utils = {
     },
     async debug() {
       for (;;) {
-        let res = await fetch(`http://localhost:5000/log`);
+        let res = await fetch(`${SERVER_URL}/log`);
         let restext = await res.text();
 
         if (restext === "Waiting...") {
           this.debico = "wait";
-        } else if (restext === "Exception: command not found!") {
+        } else if (
+          restext ===
+          "Exception: command not found! Install Neovim and try again!"
+        ) {
           this.debico = "err";
         } else if (restext === "Check your internet connection!") {
           this.debico = "err";
@@ -52,7 +57,7 @@ export const utils = {
     },
     async launch() {
       this.notify(`Launching nvim/vim`, "loop");
-      const req = await fetch(`http://localhost:5000/launch`);
+      const req = await fetch(`${SERVER_URL}/launch`);
       const res = await req.text();
       if (res === "ok") {
         this.notify(`Launched!`, "done");
@@ -63,9 +68,7 @@ export const utils = {
     async getPlugins() {
       this.loading = true;
       this.notify(`Requesting to Flask server. Please wait...`, "loop");
-      const data = await fetch(
-        `http://localhost:5000/topics?page=${this.currentPage}`
-      );
+      const data = await fetch(`${SERVER_URL}/topics?page=${this.currentPage}`);
       const plugins = await data.json();
       plugins.forEach((plugin) => {
         this.plugins.push(plugin);
@@ -77,7 +80,7 @@ export const utils = {
     async instplugin(link, name) {
       this.notify(`Installing ${name}...`, "loop");
       const req = await fetch(
-        `http://localhost:5000/pluginstall?link=${link.toString()}`
+        `${SERVER_URL}/pluginstall?link=${link.toString()}`
       );
       const res = await req.text();
       if (res === "ok") {
@@ -88,7 +91,7 @@ export const utils = {
     },
     async updplugin() {
       this.notify(`Updating plugins, please wait...`, "loop");
-      const req = await fetch(`http://localhost:5000/plugupdate`);
+      const req = await fetch(`${SERVER_URL}/plugupdate`);
       const res = await req.text();
       if (res === "ok") {
         this.notify(`Plugins has been updated!`, "done");
@@ -97,7 +100,7 @@ export const utils = {
       }
     },
     async editorcheck() {
-      const req = await fetch(`http://localhost:5000/vimcheck`);
+      const req = await fetch(`${SERVER_URL}/vimcheck`);
       const res = await req.json();
       if (res.editor === "none") {
         return undefined;
@@ -106,7 +109,7 @@ export const utils = {
     },
     async updatevim() {
       this.notify(`Updating nvim/vim, please wait...`, "loop");
-      const req = await fetch(`http://localhost:5000/upgradevim`);
+      const req = await fetch(`${SERVER_URL}/upgradevim`);
       const res = await req.text();
       if (res === "ok") {
         this.notify(`Nvim/vim has been updated!`, "done");

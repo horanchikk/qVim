@@ -33,7 +33,7 @@ If you use WSL, add this in /etc/wsl.conf:
 appendWindowsPath = false
 ```
 
-and execute shell command again.
+then execute shell command again.
 
 ## Windows users
 

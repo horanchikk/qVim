@@ -30,7 +30,7 @@ def cmd(msg):
         result = call(msg, shell=True)
         match result:
             case 1:
-                devlogfile.write('Exception: command not found!')
+                devlogfile.write('Exception: command not found! Install Neovim and try again!')
                 return False
             case 0:
                 devlogfile.write('Waiting...')
@@ -91,8 +91,7 @@ def topics():
             descreq = descs[i].text
             fixdesc = descreq.replace("\n", "")
             link = str(links[i]['href'])
-            texts.append(
-                {'name': fixname, 'description': fixdesc, 'link': link})
+            texts.append({'name': fixname, 'description': fixdesc, 'link': link})
     except Exception as e:
         print(app.logger.warn(e))
 
@@ -165,4 +164,4 @@ def stop():
     return 0
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5000)
+    app.run(debug=False, port=5005)
