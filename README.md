@@ -1,6 +1,6 @@
 # Welcome to qVim!
 
-qVim - it is vim plugin manager with graphic interface. Here you can find some plugins and qVim install it to your favorite text editor automatically.
+qVim - it is vim plugin manager with web interface. Here you can find some plugins and qVim install it to your favorite text editor automatically.
 
 ## Why qVim?
 
